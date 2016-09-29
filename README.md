@@ -3,6 +3,7 @@ A ionic 2 boilerplate for starting new projects. This boilerplate will follow th
 
 ## FEATURES
 - Ionic rc0
+- Unit testing with karma
 - SCSS Lint (Refs: https://github.com/HugoGiraudel/sass-boilerplate)
 - TSlint 
 - NVM (Refs: https://github.com/creationix/nvm)
@@ -46,7 +47,6 @@ gem install scss_lint
 ## GIT
 - Before commit tslint and scss lint run
 - Git flow: optional
-- Todo: add test to pre-push
 Workflow:
 - git add .
 - npm run commit
