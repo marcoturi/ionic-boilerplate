@@ -1,6 +1,6 @@
 # IONIC 2 Boilerplate
- [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependency Status](https://david-dm.org/lathonez/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate#info=devDependencies)
-A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practice for angular and ionic development.
+ [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate#info=devDependencies)
+<br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practice for angular and ionic development.
 
 ## FEATURES
 - Ionic rc0
@@ -61,8 +61,8 @@ gem install scss_lint
 ## GIT WORKLOW
 - Optionally you can use Git flow (ref: http://danielkummer.github.io/git-flow-cheatsheet/)
 - If you want to bump the changelog, run "npm run release"
-- You should consider shortcut in .bashrc for the following commands
-**Workflow:**
+- You should consider shortcut in .bashrc for the following commands<br>
+**Workflow:**<br>
 - git add .
 - npm run commit //this will run tslint and scss lint + commit
 - npm run push //this will run tests + push
