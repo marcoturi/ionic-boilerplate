@@ -10,10 +10,10 @@
 - NVM (ref: https://github.com/creationix/nvm)
 - GIT workflow with Commitizen (see GIT section below)
 - BetterScripts for npm
-- ENV variables from package.json injected 
+- ENV variables from package.json injected
+- Es-Lodash
 
 ## TODO
-- Add lodash
 - e2e tests
 - Continuous Integration files with travis and gitlab + Dockerfile
 - Automatic ipa/apk after CI through ionic upload

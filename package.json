@@ -102,11 +102,13 @@
     "@ionic/storage": "^1.0.3",
     "ionic-angular": "^2.0.0-rc.0",
     "ionic-native": "^2.0.3",
-    "ionicons": "^3.0.0"
+    "ionicons": "^3.0.0",
+    "lodash-es": "^4.16.2"
   },
   "devDependencies": {
     "@ionic/app-scripts": "^0.0.23",
     "@types/jasmine": "2.2.34",
+    "@types/lodash": "^4.14.36",
     "better-npm-run": "0.0.11",
     "codelyzer": "^1.0.0-beta.0",
     "commitizen": "^2.8.6",
