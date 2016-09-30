@@ -5,7 +5,7 @@
 ## FEATURES
 - Ionic rc0
 - Unit testing with karma
-- e2e tests with protractor
+- e2e tests with protractor + screenshot reporter
 - SCSS Lint (ref: https://github.com/HugoGiraudel/sass-boilerplate)
 - TSlint 
 - NVM (ref: https://github.com/creationix/nvm)
@@ -62,11 +62,13 @@ gem install scss_lint
 ## GIT WORKLOW
 - Optionally you can use Git flow (ref: http://danielkummer.github.io/git-flow-cheatsheet/)
 - If you want to bump the changelog, run "npm run release"
-- You should consider shortcut in .bashrc for the following commands<br>
+- You should consider to write a shortcut in .bashrc for the following commands<br>
 **Workflow:**<br>
-- git add .
-- npm run commit //this will run tslint and scss lint + commit
-- npm run push //this will run tests + push
+```
+git add .
+npm run commit // this will run tslint + scss lint + commit
+npm run push // this will run unit tests + push
+```
 
 ## TYPINGS
 http://microsoft.github.io/TypeSearch/
