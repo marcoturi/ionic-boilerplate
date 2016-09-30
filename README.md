@@ -1,6 +1,6 @@
 # IONIC 2 Boilerplate
- [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate#info=devDependencies)
-<br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practice for angular and ionic development.
+ [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate#info=devDependencies)
+<br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
 ## FEATURES
 - Ionic rc0
