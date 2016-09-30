@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { filter } from 'lodash-es';
+import _ from 'lodash-es';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -24,7 +24,7 @@ export class HomePage {
                 active: false,
             }];
 
-        this.user = (filter(myArr, o => !o.active))[0];
+        this.user = (_.filter(myArr, o => !o.active))[0];
     }
 
 }
