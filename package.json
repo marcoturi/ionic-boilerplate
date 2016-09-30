@@ -28,7 +28,7 @@
     "dev": "bnr dev",
     "build": "bnr build",
     "test": "bnr test",
-    "pree2e": "webdriver-manager update --chrome && cd www && python -m http.server 8090 >> ../python_serve.log 2>&1 &",
+    "pree2e": "cd www && python -m SimpleHTTPServer 8090 >> ../python_serve.log 2>&1 &",
     "e2e": "protractor config/protractor.conf.js",
     "pree2e:interactive": "npm run pree2e",
     "e2e:interactive": "protractor config/protractor.conf.js --elementExplorer",
@@ -48,7 +48,8 @@
     "lint": "tslint \"src/**/*.ts\" --exclude=src/**/*.d.ts",
     "scss-lint": "scss-lint",
     "docs": "typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/",
-    "outdated": "npm outdated --depth 0"
+    "outdated": "npm outdated --depth 0",
+    "postinstall": "webdriver-manager update --chrome"
   },
   "betterScripts": {
     "dev": {

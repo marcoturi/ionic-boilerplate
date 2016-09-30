@@ -33,7 +33,7 @@ npm i -g cordova ionic
 gem install scss_lint
 ionic state restore
 ```
-Note: you should have python and ruby installed.
+Note: you should have python 2 (if you have the 3.0 you should update e2e script) and ruby 2 installed.
 
 ## All Available NPM scripts commands
 
@@ -70,7 +70,7 @@ npm run push // this will run unit tests + push
 http://microsoft.github.io/TypeSearch/
 
 ## E2E
-- I'm using a python server to run the e2e tests for 2 reasons. First, sometimes you have 2 or more project running together and this mean that port 8100 is not available. Secondly sometimes, even working on a single project you have to kill the process manually because the original process didn't exit correctly and port is still unavailable.
+- I'm using a python server to run the e2e tests for 2 reasons. First, sometimes you have 2 or more projects running together and this mean that port 8100 is not available. Secondly sometimes, even working on a single project you have to kill the process manually because the original process didn't exit correctly and port is still unavailable.
 
 ## WEBSTORM TIPS
 - Set code style for typesript:
