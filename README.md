@@ -29,6 +29,7 @@
 ```
 npm i -g cordova ionic
 gem install scss_lint
+ionic state restore
 ```
 
 ## All Available NPM scripts commands
