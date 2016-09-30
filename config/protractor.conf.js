@@ -30,7 +30,7 @@ exports.config = {
         isVerbose: true,
         includeStackTrace: false
     },
-    baseUrl: 'http://localhost:8102',
+    baseUrl: 'http://localhost:8100',
     allScriptsTimeout: 30000,
     // hook into screenshotReporter's beforeLaunch
     beforeLaunch: function() {

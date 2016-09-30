@@ -40,6 +40,3 @@ doc/
 node_modules/
 platforms/
 plugins/
-
-# Todo: not sure is correct
-hooks/
