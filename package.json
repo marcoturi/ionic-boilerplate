@@ -125,7 +125,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
     "phantomjs-prebuilt": "^2.1.12",
-    "protractor": "4.0.9",
+    "protractor": "^4.0.9",
     "protractor-jasmine2-screenshot-reporter": "^0.3.2",
     "rollup-plugin-alias": "^1.2.0",
     "rollup-plugin-angular": "^0.4.2",

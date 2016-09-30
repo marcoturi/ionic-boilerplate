@@ -5,6 +5,7 @@
 ## FEATURES
 - Ionic rc0
 - Unit testing with karma
+- e2e tests with protractor
 - SCSS Lint (ref: https://github.com/HugoGiraudel/sass-boilerplate)
 - TSlint 
 - NVM (ref: https://github.com/creationix/nvm)
@@ -14,7 +15,6 @@
 - Es-Lodash
 
 ## TODO
-- e2e tests
 - Continuous Integration files with travis and gitlab + Dockerfile
 - Automatic ipa/apk after CI through ionic upload
 - Documentation with typedoc (waiting a new release that supports ts 2.0 (https://github.com/TypeStrong/typedoc/issues/234)
@@ -37,12 +37,13 @@ gem install scss_lint
 |-------------------|--------------------------------------------------------|
 | `dev`             | run ionic serve                                        |
 | `build`           | Full production build. Use `--dev` flag for dev build. |
-| `build`           | build for production                                   |
 | `release`         | generate changelog based on commits                    |
 | `push`            | shortcut for git push origin master --follow-tags      |
 | `lint`            | lint with tslint                                       |
 | `scss-lint`       | lint scss                                              |
-| `docs`            | not working yet, see below                             |
+| `test`            | runs Karma test                                        |
+| `e2e`             | runs e2e protractor tests                              |
+| `docs`            | not working yet                                        |
 | `outdated`        | search npm packages for outdated dependencies          |
 | `ios:dev`         | build .ipa using dev environment vars                  |
 | `ios:release`     | build .ipa with production environment vars            |
