@@ -140,7 +140,7 @@
     "standard-version": "^2.2.1",
     "ts-helpers": "^1.1.1",
     "ts-node": "^1.3.0",
-    "typedoc": "github:jasongrout/typedoc#ts2",
+    "typedoc": "^0.4.5",
     "typescript": "^2.0.3",
     "validate-commit-msg": "^2.8.0"
   },

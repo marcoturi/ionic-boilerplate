@@ -13,26 +13,27 @@ module.exports = function karmaConfig(config) {
         // base path that will be used to resolve all patterns (e.g. files, exclude)
         basePath: '../',
         frameworks: ['jasmine'],
+        plugins: [
+            require('karma-jasmine'),
+            require('karma-chrome-launcher'),
+            require('karma-rollup-plugin')
+        ],
         reporters: [
-            // Reference: https://github.com/mlex/karma-spec-reporter
-            // Set reporter to print detailed results to console
-            'spec',
-            // Reference: https://github.com/karma-runner/karma-coverage
-            // Output code coverage files
-            'coverage'
+            // // Reference: https://github.com/mlex/karma-spec-reporter
+            // // Set reporter to print detailed results to console
+            // 'spec',
+            // // Reference: https://github.com/karma-runner/karma-coverage
+            // // Output code coverage files
+            // 'coverage'
+            'progress'
         ],
         // list of files / patterns to load in the browser we are building
         // the config environment in ./karma-shim.js
         files: [
-            'src/**/*.spec.ts'
-        ],
-        // list of files to exclude
-        exclude: [
-            'node_modules/angular2/**/*_spec.js',
-            'node_modules/ionic-angular/**/*spec*'
+            'config/karma-shim.ts'
         ],
         preprocessors: {
-            'src/**/*.spec.ts': ['rollup']
+            'config/karma-shim.ts': ['rollup']
         },
         rollupPreprocessor: {
             context: 'this',
@@ -44,36 +45,21 @@ module.exports = function karmaConfig(config) {
                     typescript: require('../node_modules/typescript')
                 }),
                 alias({
-                    rxjs: path.resolve(__dirname, '../node_modules/rxjs-es'),
-                    '@angular/core/testing': path.resolve(__dirname, '../node_modules/@angular/core/testing/index'),
-                    '@angular/platform-browser-dynamic/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser-dynamic/testing/index'),
-                    '@angular/compiler/testing': path.resolve(__dirname, '../node_modules/@angular/compiler/testing/index'),
-                    '@angular/platform-browser/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser/testing/index')
+                    '@angular/core/testing': path.resolve(__dirname, '../node_modules/@angular/core/testing/index.js'),
+                    '@angular/platform-browser-dynamic/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser-dynamic/testing/index.js'),
+                    '@angular/compiler/testing': path.resolve(__dirname, '../node_modules/@angular/compiler/testing/index.js'),
+                    '@angular/platform-browser/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser/testing/index.js')
                 }),
                 commonjs(),
                 nodeResolve({ jsnext: true, main: true, browser: true }),
                 buble()
             ]
         },
-        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: [
-            'Chrome'
-        ],
-        browserNoActivityTimeout: 30000,
-        // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: true,
-        // Configure code coverage reporter
-        coverageReporter: {
-            dir: 'coverage/',
-            type: 'html'
-        },
-        customLaunchers: {
-            Chrome_travis_ci: {
-                base: 'Chrome',
-                flags: ['--no-sandbox']
-            }
-        },
+        port: 9876,
         colors: true,
+        logLevel: config.LOG_INFO,
+        autoWatch: true,
+        browsers: ['Chrome'],
          // Continuous Integration mode if true, Karma captures browsers, runs the tests and exits
         singleRun: true
     };
