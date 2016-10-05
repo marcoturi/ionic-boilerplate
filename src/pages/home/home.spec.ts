@@ -5,7 +5,6 @@ import { mockNavController } from 'ionic-angular/util/mock-providers';
 import { NavController } from 'ionic-angular';
 
 describe('Sales Service', () => {
-    let component: HomePage;
 
     beforeEach((done) => {
 
@@ -13,7 +12,7 @@ describe('Sales Service', () => {
             declarations: [HomePage],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
             providers: [
-                {provide: NavController, useValue: mockNavController}
+                {provide: NavController, useValue: mockNavController},
             ],
         });
         TestBed.compileComponents();
