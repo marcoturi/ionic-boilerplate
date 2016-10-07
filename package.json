@@ -164,6 +164,8 @@
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard"
   ],
-  "cordovaPlatforms": [],
+  "cordovaPlatforms": [
+      "android@5.2.2"
+  ],
   "license": "MIT"
 }

@@ -1,0 +1,40 @@
+image: marcoturi/ionic2-boilerplate
+
+stages:
+  - test
+  - deploy
+
+before_script:
+  - npm prune
+  - npm install
+  - npm run update-selenium
+  - gem install scss_lint
+  - DISPLAY=:99
+
+cache:
+  paths:
+    - node_modules/
+
+build_web:
+  stage: test
+  only:
+      - master
+  script:
+    - npm run lint
+    - npm run scss-lint
+    - npm run build
+    - /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &
+    - npm run e2e
+    - npm run test
+
+build_android:
+  stage: deploy
+  only:
+    - master
+  script:
+    - ionic state restore
+    - npm run android:release
+    - ls ./platforms/android/build/outputs/apk/android*.apk
+  artifacts:
+    paths:
+      - platforms/android/build/outputs/apk/
