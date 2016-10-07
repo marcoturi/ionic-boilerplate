@@ -48,8 +48,7 @@
     "lint": "tslint \"src/**/*.ts\" --exclude=src/**/*.d.ts",
     "scss-lint": "scss-lint",
     "docs": "typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/",
-    "outdated": "npm outdated --depth 0",
-    "postinstall": "webdriver-manager update --chrome"
+    "outdated": "npm outdated --depth 0"
   },
   "betterScripts": {
     "dev": {

@@ -8,7 +8,7 @@ before_script:
   - npm prune
   - npm install
   - gem install scss_lint
-  - DISPLAY=:99
+  - export DISPLAY=:99
 
 cache:
   paths:
@@ -22,9 +22,10 @@ build_web:
     - npm run lint
     - npm run scss-lint
     - npm run build
+    - npm run test
+    - webdriver-manager update
     - /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &
     - npm run e2e
-    - npm run test
 
 build_android:
   stage: deploy

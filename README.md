@@ -32,6 +32,7 @@
 npm i -g cordova ionic
 gem install scss_lint
 ionic state restore
+webdriver-manager update
 ```
 Note: you should have python 2 (if you have the 3.0 you should update e2e script) and ruby 2 installed.
 
