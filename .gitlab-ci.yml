@@ -7,7 +7,6 @@ stages:
 before_script:
   - npm prune
   - npm install
-  - npm run update-selenium
   - gem install scss_lint
   - DISPLAY=:99
 
