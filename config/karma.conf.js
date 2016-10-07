@@ -15,8 +15,8 @@ module.exports = function karmaConfig(config) {
         frameworks: ['jasmine'],
         plugins: [
             require('karma-jasmine'),
-            require('karma-chrome-launcher'),
-            require('karma-rollup-plugin')
+            require('karma-rollup-plugin'),
+            require('karma-phantomjs-launcher')
         ],
         reporters: [
             // // Reference: https://github.com/mlex/karma-spec-reporter
@@ -59,7 +59,7 @@ module.exports = function karmaConfig(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
          // Continuous Integration mode if true, Karma captures browsers, runs the tests and exits
         singleRun: true
     };
