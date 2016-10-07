@@ -1,4 +1,4 @@
-image: marcoturi/ionic2-boilerplate
+image: marcoturi/ionic2-boilerplate#master
 
 stages:
   - test
