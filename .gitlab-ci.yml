@@ -33,7 +33,7 @@ build_android:
   only:
     - master
   script:
-    - ionic state restore
+    - cordova prepare android
     - npm run android:release
     - ls ./platforms/android/build/outputs/apk/android*.apk
   artifacts:

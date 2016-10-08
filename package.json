@@ -155,16 +155,5 @@
     "ionic_rollup": "./config/rollup.config.js"
   },
   "description": "ionic2-boilerplate: An Ionic project",
-  "cordovaPlugins": [
-    "cordova-plugin-device",
-    "cordova-plugin-console",
-    "cordova-plugin-whitelist",
-    "cordova-plugin-splashscreen",
-    "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
-  ],
-  "cordovaPlatforms": [
-    "android@5.2.2"
-  ],
   "license": "MIT"
 }
