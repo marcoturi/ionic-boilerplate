@@ -35,9 +35,6 @@ build_android:
   script:
     - ls
     - npm run android:release
-    - ionic state restore
-    - ionic platform add android
-    - ionic build android
     - ls ./platforms/android/build/outputs/apk/android*.apk
   artifacts:
     paths:
