@@ -1,5 +1,5 @@
 # IONIC 2 Boilerplate
- [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) [![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master)
+ [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) [![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg)[![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master)
 <br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
 ## FEATURES
@@ -8,6 +8,7 @@
 - Dockerfile (https://github.com/marcoturi/ionic-docker)
 - Unit testing with karma
 - e2e tests with protractor + screenshot reporter
+- Coverege with istanbul
 - SCSS Lint (ref: https://github.com/HugoGiraudel/sass-boilerplate)
 - TSlint with Codelyzer (ref: https://github.com/mgechev/codelyzer)
 - NVM (ref: https://github.com/creationix/nvm)
@@ -17,7 +18,6 @@
 - Es-Lodash
 
 ## TODO
-- Coverege
 - Automatic ipa after CI through ionic upload
 - Documentation with typedoc (waiting a new release that supports ts 2.0 (https://github.com/TypeStrong/typedoc/issues/234)
 
@@ -32,7 +32,7 @@
 npm i -g cordova ionic
 gem install scss_lint
 ionic state restore
-webdriver-manager update
+./node_modules/.bin/webdriver-manager update
 ```
 Note: you should have python 2 (if you have the 3.0 you should update e2e script) and ruby 2 installed.
 

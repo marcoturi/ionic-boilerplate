@@ -22,14 +22,8 @@ module.exports = function karmaConfig(config) {
             require('karma-coverage')
         ],
         reporters: [ 'mocha', 'coverage'],
-        // list of files / patterns to load in the browser we are building
-        // the config environment in ./karma-shim.js
-        files: [
-            'config/karma-shim.ts'
-        ],
-        preprocessors: {
-            'config/karma-shim.ts': ['rollup']
-        },
+        files: ['config/karma-shim.ts'],
+        preprocessors: {'config/karma-shim.ts': ['rollup']},
         rollupPreprocessor: {
             context: 'this',
             plugins: [
@@ -60,19 +54,17 @@ module.exports = function karmaConfig(config) {
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['PhantomJS'],
-         // Continuous Integration mode if true, Karma captures browsers, runs the tests and exits
         singleRun: true,
-        // Configure code coverage reporter
         coverageReporter: {
             dir : 'coverage/',
-            type : 'html',
-            subdir: 'istanbul'
+            subdir: 'istanbul',
+            reporters: [{
+                type: 'text'
+            }, {
+                type: 'html'
+            }]
         }
     };
-
-    // if(process.env.GITLAB_CI){
-    //     //configuration.browsers = ['Chrome_travis_ci'];
-    // }
 
     config.set(configuration);
 };
