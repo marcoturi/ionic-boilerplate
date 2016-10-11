@@ -14,26 +14,25 @@ cache:
   paths:
     - node_modules/
 
-#build_web:
-#  stage: test
-#  only:
-#      - master
-#  script:
-#    - npm run lint
-#    - npm run scss-lint
-#    - ./node_modules/.bin/webdriver-manager update
-#    - /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &
-#    - mkdir coverage
-#    - npm run test
-#    - npm run build
-#    - npm run e2e
+build_web:
+  stage: test
+  only:
+      - master
+  script:
+    - npm run lint
+    - npm run scss-lint
+    - ./node_modules/.bin/webdriver-manager update
+    - /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &
+    - mkdir coverage
+    - npm run test
+    - npm run build
+    - npm run e2e
 
 build_android:
   stage: deploy
   only:
     - master
   script:
-    - npm run android:release
     - ionic state restore
     - ionic platform add android
     - ionic build android

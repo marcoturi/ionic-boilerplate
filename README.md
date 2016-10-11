@@ -1,9 +1,11 @@
 # IONIC 2 Boilerplate
- [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev)
+ [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) [![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master)
 <br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
 ## FEATURES
 - Ionic rc0
+- Continuous Integration files with Gitlab + Automatic apk after CI (**why**: i chose Gitlab instead of travis because it can be used for private projects for free)
+- Dockerfile (https://github.com/marcoturi/ionic-docker)
 - Unit testing with karma
 - e2e tests with protractor + screenshot reporter
 - SCSS Lint (ref: https://github.com/HugoGiraudel/sass-boilerplate)
@@ -16,9 +18,7 @@
 
 ## TODO
 - Coverege
-- Continuous Integration files with travis and gitlab
-- Dockerfile
-- Automatic ipa/apk after CI through ionic upload
+- Automatic ipa after CI through ionic upload
 - Documentation with typedoc (waiting a new release that supports ts 2.0 (https://github.com/TypeStrong/typedoc/issues/234)
 
 ## OPTIONAL LIBRARIES
@@ -60,6 +60,7 @@ Note: you should have python 2 (if you have the 3.0 you should update e2e script
 - Optionally you can use Git flow (ref: http://danielkummer.github.io/git-flow-cheatsheet/)
 - If you want to bump the changelog, run "npm run release"
 - You should consider to write a shortcut in .bashrc for the following commands<br>
+- This repo has mirror in gitlab for CI (https://gitlab.com/marco_turi/ionic2-boilerplate) after every push on master you will get automaticly an .apk generated from CI.
 **Workflow:**<br>
 ```
 git add .
