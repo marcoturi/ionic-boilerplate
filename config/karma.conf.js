@@ -7,6 +7,7 @@ const nodeResolve = require('rollup-plugin-node-resolve');
 const angular = require('rollup-plugin-angular');
 const commonjs = require('rollup-plugin-commonjs');
 const alias = require('rollup-plugin-alias');
+const istanbul = require('rollup-plugin-istanbul');
 
 module.exports = function karmaConfig(config) {
     var configuration = {
@@ -16,17 +17,11 @@ module.exports = function karmaConfig(config) {
         plugins: [
             require('karma-jasmine'),
             require('karma-rollup-plugin'),
-            require('karma-phantomjs-launcher')
+            require('karma-phantomjs-launcher'),
+            require('karma-mocha-reporter'),
+            require('karma-coverage')
         ],
-        reporters: [
-            // // Reference: https://github.com/mlex/karma-spec-reporter
-            // // Set reporter to print detailed results to console
-            // 'spec',
-            // // Reference: https://github.com/karma-runner/karma-coverage
-            // // Output code coverage files
-            // 'coverage'
-            'progress'
-        ],
+        reporters: [ 'mocha', 'coverage'],
         // list of files / patterns to load in the browser we are building
         // the config environment in ./karma-shim.js
         files: [
@@ -52,7 +47,12 @@ module.exports = function karmaConfig(config) {
                 }),
                 commonjs(),
                 nodeResolve({ jsnext: true, main: true, browser: true }),
-                buble()
+                buble(),
+                istanbul({
+                    include: ['**/*.ts'],
+                    ignore: ['**/node_modules/**'],
+                    exclude: ['**/*.spec.ts', '**/config/**']
+                })
             ]
         },
         port: 9876,
@@ -61,7 +61,13 @@ module.exports = function karmaConfig(config) {
         autoWatch: true,
         browsers: ['PhantomJS'],
          // Continuous Integration mode if true, Karma captures browsers, runs the tests and exits
-        singleRun: true
+        singleRun: true,
+        // Configure code coverage reporter
+        coverageReporter: {
+            dir : 'coverage/',
+            type : 'html',
+            subdir: 'istanbul'
+        }
     };
 
     // if(process.env.GITLAB_CI){

@@ -1,7 +1,7 @@
 const SSReporter = require('protractor-jasmine2-screenshot-reporter');
 
 const screenshotReporter = new SSReporter ({
-    dest: 'coverage/screenshots',
+    dest: 'coverage/protractor',
     pathBuilder: function(currentSpec, suites) {
         var name = currentSpec.fullName;
         return name.replace(/\s+/g, '-').toLowerCase();
