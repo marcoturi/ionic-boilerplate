@@ -47,6 +47,7 @@ Note: you should have python 2 (if you have the 3.0 you should update e2e script
 | `lint`            | lint with tslint                                       |
 | `scss-lint`       | lint scss                                              |
 | `test`            | runs Karma test                                        |
+| `test:watch`      | runs Karma test watching for edits (usefull for TDD)   |
 | `e2e`             | runs e2e protractor tests                              |
 | `e2e:interactive` | runs e2e protractor tests in interactive mode          |
 | `docs`            | not working yet                                        |
