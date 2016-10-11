@@ -4,7 +4,7 @@
 
 ## FEATURES
 - Ionic rc0
-- Continuous Integration files with Gitlab + Automatic apk after CI (**why**: i chose Gitlab instead of travis because it can be used for private projects for free)
+- Continuous Integration with Gitlab + Automatic apk (**why**: i chose Gitlab instead of travis because it's free for private projects)
 - Dockerfile (https://github.com/marcoturi/ionic-docker)
 - Unit testing with karma
 - e2e tests with protractor + screenshot reporter
@@ -60,7 +60,7 @@ Note: you should have python 2 (if you have the 3.0 you should update e2e script
 - Optionally you can use Git flow (ref: http://danielkummer.github.io/git-flow-cheatsheet/)
 - If you want to bump the changelog, run "npm run release"
 - You should consider to write a shortcut in .bashrc for the following commands<br>
-- This repo has mirror in gitlab for CI (https://gitlab.com/marco_turi/ionic2-boilerplate) after every push on master you will get automaticly an .apk generated from CI.
+- This repo has a mirror in gitlab for CI (https://gitlab.com/marco_turi/ionic2-boilerplate) after every push on master you will get automatically an .apk generated from CI.
 **Workflow:**<br>
 ```
 git add .

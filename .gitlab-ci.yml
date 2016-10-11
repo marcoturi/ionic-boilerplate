@@ -33,6 +33,8 @@ build_android:
   only:
     - master
   script:
+    - ls
+    - npm run android:release
     - ionic state restore
     - ionic platform add android
     - ionic build android

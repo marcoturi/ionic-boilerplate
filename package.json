@@ -94,7 +94,7 @@
       }
     },
     "android:release": {
-      "command": "npm run build",
+      "command": "npm run build && ionic build android",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "android"
