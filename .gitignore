@@ -24,11 +24,11 @@ UserInterfaceState.xcuserstate
 .sass-cache/
 .tmp/
 *.tmp.*
-www/
+www/*
 
 # Coverege folders
 config/coverage
-coverage/
+coverage/*
 dist/
 tmp/
 temp/
