@@ -1,4 +1,4 @@
-image: marcoturi/ionic2-boilerplate:master
+image: marcoturi/ionic:latest
 
 stages:
   - test
@@ -33,8 +33,10 @@ build_android:
   only:
     - master
   script:
-    - cordova prepare android
     - npm run android:release
+    - ionic state restore
+    - ionic platform add android
+    - ionic build android
     - ls ./platforms/android/build/outputs/apk/android*.apk
   artifacts:
     paths:
