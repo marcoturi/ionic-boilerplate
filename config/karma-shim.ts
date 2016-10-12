@@ -22,6 +22,9 @@ TestBed.initTestEnvironment(
     platformBrowserDynamicTesting()
 );
 
+// toreplace
 import '../src/pages/home/home.spec';
+import '../src/pages/contact/contact.spec';
+// toreplace
 
 __karma__.start();
