@@ -1,8 +1,9 @@
 import { DebugElement, Type, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { Predicate } from "@angular/core/src/facade/collection";
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { NavController }  from 'ionic-angular';
-import { mockNavController } from 'ionic-angular/util/mock-providers';
+import { NavController, App, Platform, Config, MenuController, Keyboard, GestureController, Form, IonicModule }  from 'ionic-angular';
+import { mockNavController, mockPlatform } from 'ionic-angular/util/mock-providers';
+import { ConfigMock, MenuControllerMock, KeyboardMock, GestureControllerMock, FormMock } from './mocks';
 
 /**
  * @ngdoc object
@@ -83,7 +84,17 @@ export class ComponentTest<T extends any> {
             declarations: [component],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
             providers: [
+                {provide: App, useClass: ConfigMock},
                 {provide: NavController, useValue: mockNavController},
+                {provide: Platform, useValue: mockPlatform},
+                {provide: Config, useClass: ConfigMock},
+                {provide: MenuController, useClass: MenuControllerMock},
+                {provide: Keyboard, useClass: KeyboardMock},
+                {provide: GestureController, useClass: GestureControllerMock},
+                {provide: Form, useClass: FormMock}
+            ],
+            imports: [
+                IonicModule
             ],
         });
         TestBed.compileComponents();

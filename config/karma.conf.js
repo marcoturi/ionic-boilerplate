@@ -63,6 +63,9 @@ module.exports = function karmaConfig(config) {
                 type: 'text'
             }, {
                 type: 'html'
+            },{
+                type: 'cobertura',
+                file: 'cobertura.xml'
             }]
         }
     };

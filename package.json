@@ -54,8 +54,8 @@
     "commit": "git-cz",
     "release": "standard-version --no-verify",
     "push": "git push --follow-tags origin master",
-    "lint": "tslint \"src/**/*.ts\" --exclude=src/**/*.d.ts",
-    "sass-lint": "sass-lint src/**/*.scss ",
+    "lint": "tslint \"src/**/*.ts\" --exclude=src/**/*.d.ts --force",
+    "sass-lint": "sass-lint src/**/*.scss -v",
     "outdated": "npm outdated --depth 0"
   },
   "betterScripts": {
