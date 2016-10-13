@@ -26,7 +26,7 @@ UserInterfaceState.xcuserstate
 *.tmp.*
 www/*
 
-# Coverege folders
+# Coverage folders
 config/coverage
 coverage/*
 dist/
@@ -40,3 +40,6 @@ doc/
 node_modules/
 platforms/
 plugins/
+
+#Genarated files
+src/index.ts
