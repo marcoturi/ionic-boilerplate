@@ -31,7 +31,7 @@ module.exports = function karmaConfig(config) {
                     exclude: 'node_modules/**'
                 }),
                 ts({
-                    typescript: require('../node_modules/typescript')
+                    typescript: require('typescript')
                 }),
                 alias({
                     '@angular/core/testing': path.resolve(__dirname, '../node_modules/@angular/core/testing/index.js'),
@@ -54,6 +54,7 @@ module.exports = function karmaConfig(config) {
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['PhantomJS'],
+         // Continuous Integration mode if true, Karma captures browsers, runs the tests and exits
         singleRun: true,
         coverageReporter: {
             dir : 'coverage/',
@@ -62,6 +63,9 @@ module.exports = function karmaConfig(config) {
                 type: 'text'
             }, {
                 type: 'html'
+            },{
+                type: 'cobertura',
+                file: 'cobertura.xml'
             }]
         }
     };
