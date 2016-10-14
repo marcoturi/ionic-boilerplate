@@ -7,7 +7,7 @@ const nodeResolve = require('rollup-plugin-node-resolve');
 const angular = require('rollup-plugin-angular');
 const commonjs = require('rollup-plugin-commonjs');
 const alias = require('rollup-plugin-alias');
-const istanbul = require('rollup-plugin-istanbul');
+// const istanbul = require('rollup-plugin-istanbul');
 
 module.exports = function karmaConfig(config) {
     var configuration = {
@@ -19,9 +19,9 @@ module.exports = function karmaConfig(config) {
             require('karma-rollup-plugin'),
             require('karma-phantomjs-launcher'),
             require('karma-mocha-reporter'),
-            require('karma-coverage')
+            // require('karma-coverage')
         ],
-        reporters: [ 'mocha', 'coverage'],
+        reporters: [ 'mocha'], //'coverage'],
         files: ['config/karma-shim.ts'],
         preprocessors: {'config/karma-shim.ts': ['rollup']},
         rollupPreprocessor: {
@@ -41,12 +41,12 @@ module.exports = function karmaConfig(config) {
                 }),
                 commonjs(),
                 nodeResolve({ jsnext: true, main: true, browser: true }),
-                buble(),
-                istanbul({
-                    include: ['**/*.ts'],
-                    ignore: ['**/node_modules/**'],
-                    exclude: ['**/*.spec.ts', '**/config/**']
-                })
+                buble()
+                // istanbul({
+                //     include: ['**/*.ts'],
+                //     ignore: ['**/node_modules/**'],
+                //     exclude: ['**/*.spec.ts', '**/config/**']
+                // })
             ]
         },
         port: 9876,
@@ -55,15 +55,15 @@ module.exports = function karmaConfig(config) {
         autoWatch: true,
         browsers: ['PhantomJS'],
         singleRun: true,
-        coverageReporter: {
-            dir : 'coverage/',
-            subdir: 'istanbul',
-            reporters: [{
-                type: 'text'
-            }, {
-                type: 'html'
-            }]
-        }
+        // coverageReporter: {
+        //     dir : 'coverage/',
+        //     subdir: 'istanbul',
+        //     reporters: [{
+        //         type: 'text'
+        //     }, {
+        //         type: 'html'
+        //     }]
+        // }
     };
 
     config.set(configuration);
