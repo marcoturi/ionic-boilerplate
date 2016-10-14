@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.5.0...v0.6.0) (2016-10-14)
+
+
+### Features
+
+* **karma:** add watch for spec files to test command too. ([ab97c5e](https://github.com/marcoturi/ionic2-boilerplate/commit/ab97c5e))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.4.0...v0.5.0) (2016-10-14)
 
