@@ -16,7 +16,7 @@
     - [Windows](#windows)
 
 ## Features
-- Ionic rc0
+- Ionic RC1
 - Es-Lodash
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 

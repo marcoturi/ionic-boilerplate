@@ -1,10 +1,15 @@
-var chokidar = require('chokidar');
-var replace = require("replace");
+const chokidar = require('chokidar');
+const replace = require('replace');
+const argv = require('minimist')(process.argv.slice(2), {boolean: ['persistent']});
 
-let listOfFiles = '';
+const persistent = argv.persistent || false;
 const mod = '// toreplace';
+let listOfFiles = '';
 
-chokidar.watch('src/**/*.spec.ts').on('all', (event, path) => {
+chokidar.watch('src/**/*.spec.ts',{
+    ignored: /[\/\\]\./,
+    persistent: persistent
+}).on('all', (event, path) => {
     // console.log(event, path);
 
     const importFile = `import '../${path.replace('.ts', '')}';\n`;
