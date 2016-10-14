@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.4.0...v0.5.0) (2016-10-14)
+
+
+### Bug Fixes
+
+* **istanbul:** temporary disabling istanbul ([e0caf89](https://github.com/marcoturi/ionic2-boilerplate/commit/e0caf89))
+
+
+### Features
+
+* **coverege:** add gitlab coverage ([f37ef7d](https://github.com/marcoturi/ionic2-boilerplate/commit/f37ef7d))
+* **hooks:** add hook to update version from package.json ([d7a637f](https://github.com/marcoturi/ionic2-boilerplate/commit/d7a637f))
+* **karma:** add test:watch task to npm ([8f70a4f](https://github.com/marcoturi/ionic2-boilerplate/commit/8f70a4f))
+* **libs:** ionic rc1, close [#6](https://github.com/marcoturi/ionic2-boilerplate/issues/6) ([9e80ca8](https://github.com/marcoturi/ionic2-boilerplate/commit/9e80ca8))
+* **reporters:** add instanbul ([eba3635](https://github.com/marcoturi/ionic2-boilerplate/commit/eba3635))
+* **tests:** add automatic watch for spec files, close [#3](https://github.com/marcoturi/ionic2-boilerplate/issues/3) ([e82453b](https://github.com/marcoturi/ionic2-boilerplate/commit/e82453b))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.3.0...v0.4.0) (2016-10-11)
 
