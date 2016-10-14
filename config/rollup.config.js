@@ -1,7 +1,7 @@
 const rollupConfig = require('../node_modules/@ionic/app-scripts/config/rollup.config');
 const replace = require('rollup-plugin-replace');
 
-console.log('Editing default ionic configuration');
+console.log('Editing rollup configuration to inject env');
 
 const nodeEnv = JSON.stringify(process.env.NODE_ENV) || 'development';
 const apiUrl = JSON.stringify(process.env.API_URL) || '';
