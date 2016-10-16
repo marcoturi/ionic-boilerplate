@@ -1,13 +1,7 @@
 'use strict';
 
 const path = require('path');
-const ts = require('rollup-plugin-typescript');
-const buble = require('rollup-plugin-buble');
-const nodeResolve = require('rollup-plugin-node-resolve');
-const angular = require('rollup-plugin-angular');
-const commonjs = require('rollup-plugin-commonjs');
-const alias = require('rollup-plugin-alias');
-// const istanbul = require('rollup-plugin-istanbul');
+const tsConfig = require("../tsconfig.json");
 
 module.exports = function karmaConfig(config) {
     var configuration = {
@@ -18,43 +12,57 @@ module.exports = function karmaConfig(config) {
             require('karma-jasmine'),
             require('karma-rollup-plugin'),
             require('karma-phantomjs-launcher'),
-            require('karma-mocha-reporter'),
-            // require('karma-coverage')
+            require('karma-mocha-reporter')
+            // require('karma-coverage'),
+            // require('karma-remap-coverage')
         ],
-        reporters: [ 'mocha'], //'coverage'],
+        reporters: ['mocha'], //'coverage', 'remap-coverage'],
         files: ['config/karma-shim.ts'],
-        preprocessors: {'config/karma-shim.ts': ['rollup']},
+        preprocessors: {'config/karma-shim.ts': ['rollup']}, //'coverage']},
         rollupPreprocessor: {
-            context: 'this',
+            // rollup settings. See Rollup documentation
             plugins: [
-                angular({
+                require('rollup-plugin-angular')({
                     exclude: 'node_modules/**'
                 }),
-                ts({
-                    typescript: require('../node_modules/typescript')
-                }),
-                alias({
+                require('rollup-plugin-typescript')(Object.assign({}, tsConfig.compilerOptions, {
+                    typescript: require('../node_modules/typescript'),
+                    // sourceMap: true
+                })),
+                // require('rollup-plugin-istanbul')({
+                //     exclude: ['**/node_modules/**', '**/*.spec.ts', '**/config/**']
+                // }),
+                require('rollup-plugin-alias')({
                     '@angular/core/testing': path.resolve(__dirname, '../node_modules/@angular/core/testing/index.js'),
                     '@angular/platform-browser-dynamic/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser-dynamic/testing/index.js'),
                     '@angular/compiler/testing': path.resolve(__dirname, '../node_modules/@angular/compiler/testing/index.js'),
                     '@angular/platform-browser/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser/testing/index.js')
                 }),
-                commonjs(),
-                nodeResolve({ jsnext: true, main: true, browser: true }),
-                buble()
-                // istanbul({
-                //     include: ['**/*.ts'],
-                //     ignore: ['**/node_modules/**'],
-                //     exclude: ['**/*.spec.ts', '**/config/**']
-                // })
-            ]
+                require('rollup-plugin-commonjs')(),
+                require('rollup-plugin-node-resolve')({
+                    jsnext: true,
+                    main: true,
+                    browser: true}),
+                require('rollup-plugin-buble')()
+            ],
+            context: 'this',
+            // will help to prevent conflicts between different tests entries
+            format: 'iife',
+            // sourceMap: "inline"
         },
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['PhantomJS'],
-        singleRun: true,
+        singleRun: true
+        // coverageReporter: {
+        //     type: 'in-memory'
+        // },
+        // remapCoverageReporter: {
+        //     'text-summary': null, // to show summary in console
+        //     html: './coverage/istanbul'
+        // },
         // coverageReporter: {
         //     dir : 'coverage/',
         //     subdir: 'istanbul',
