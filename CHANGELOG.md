@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.6.0...v0.7.0) (2016-10-16)
+
+
+### Bug Fixes
+
+* **config:** update watch script for 0.34 app-scripts ([2503e70](https://github.com/marcoturi/ionic2-boilerplate/commit/2503e70))
+* **test:** fix watch on spec and e2e files ([6d1159e](https://github.com/marcoturi/ionic2-boilerplate/commit/6d1159e))
+
+
+### Features
+
+* **npm:** update app-scripts ([cfa2c22](https://github.com/marcoturi/ionic2-boilerplate/commit/cfa2c22))
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.5.0...v0.6.0) (2016-10-14)
 
