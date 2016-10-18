@@ -24,8 +24,8 @@
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
 - ENV variables from package.json injected automatically by rollup
 - Continuous Integration with Gitlab CI ([see here for info](#gitlab-ci))
-    - Automatic apk
-    - Automatic ipa through ionic package
+    - Automatic apk only when pushing to release branch
+    - Automatic ipa through ionic package only when pushing to release branch
     - [Docker image](https://github.com/marcoturi/ionic-docker)
 - Tests
     - Unit tests with karma
@@ -76,15 +76,13 @@ Note: you should have ruby 2 installed to run scss-lint.
 
 ### <a name="gitlab-ci"></a>Gitlab CI Configuration
 - To get code coverage percentage badge use the following regexp: `All files(?:\s*\|\s*\d*\.?\d+\s*){3}\|\s*((\d*\.?\d+))\s*\|` in Gitlab CI/CD pipelines.
-- To get the automatic .ipa from ionic package add the following Secret variables in Gitlab. N.B. Be sure to don't show Build results (edit project settings) for your repo otherwise those vars could be exposed.
-
+- To get the automatic .ipa from ionic package first setup a ionic.io profile with certificates for ios. Secondly add the following Secret variables in Gitlab. N.B. Be sure to don't show Build results (edit project settings) for your repo otherwise those vars could be exposed.
 | Key                            | Description                                                                                                      |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------|
 | `IONIC_LOGIN_EMAIL`            | Your ionic.io email                                                                                              |
 | `IONIC_LOGIN_PASSWORD`         | Your ionic.io password                                                                                           |
 | `IONIC_PACKAGE_BUILD_RELEASE`  | (Optional) Indicate whether this is a release build. Possible values are `true` or `false`. Defaults to `false`. |
 | `IONIC_PACKAGE_BUILD_PROFILE`  | Security profile to use for the build, as defined in Ionic.io console.                                           |
-
 
 ## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
@@ -96,13 +94,14 @@ Note: you should have ruby 2 installed to run scss-lint.
 ### <a name="git-workflow"></a>Git Workflow
 - Optionally you can use [Git flow](http://danielkummer.github.io/git-flow-cheatsheet/)
 - If you want to bump the changelog, run "npm run release"
-- This repo has a [mirror repo in gitlab for CI](https://gitlab.com/marco_turi/ionic2-boilerplate) after every push on master you will get automatically an .apk generated from CI.
+- This repo has a [mirror repo in gitlab for CI](https://gitlab.com/marco_turi/ionic2-boilerplate) after every push on master you will get automatically all tests and lints run. To get .ipa and .apk build you need to push to the release git branch. The reason is to avoid unnecessary builds (free limit is 100/month) for ios.  
 - You should consider to write a shortcut in .bashrc for the following commands<br>
 **Workflow:**<br>
 ```
 git add .
 npm run commit // this will run tslint + scss lint + commit
-npm run push // this will run unit tests + push
+npm run push // this will run unit tests + push to master
+// now check on GITLAB if there are no errors, than if you want push your commits to the release branch to get automatic ipa and apk
 ```
 
 ### <a name="links"></a>Useful Links
