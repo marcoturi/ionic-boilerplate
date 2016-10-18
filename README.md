@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Features](#features)
-- [Roadmap](#Roadmap)
+- [Roadmap](#roadmap)
 - [Installation & Configuration](#installation)
     - [Pre-Install Commands](#pre-install)
     - [NPM scripts commands](#npm-scripts)
@@ -12,10 +12,11 @@
     - [Optional Libraries](#optional-libraries)
     - [Git Workflow](#git-workflow)
     - [Useful Links](#links)
+    - [Ionic & Cordova](#ionic-cordova)
     - [Webstorm](#webstorm)
     - [Windows](#windows)
 
-## Features
+## <a name="features"></a>Features
 - Ionic RC1
 - Es-Lodash
 - [NVM](https://github.com/creationix/nvm)
@@ -38,7 +39,7 @@
     - Automatic changelog
     - Automatic alignment of app version in config.xml from package.json through cordova hook
 
-## Roadmap
+## <a name="roadmap"></a>Roadmap
 - Automatic ipa after CI through ionic package
 - Documentation with typedoc ([waiting a new release that supports ts 2.0](https://github.com/TypeStrong/typedoc/issues/234))
 
@@ -92,6 +93,9 @@ npm run push // this will run unit tests + push
 
 ### <a name="links"></a>Useful Links
 - [Search engine for find typescript typings](http://microsoft.github.io/TypeSearch/)
+
+### <a name="ionic-cordova"></a>Ionic & Cordova
+- Avoid the use of ionic state commands and also ionic plugin/platform. Use directly cordova prepare (or cordova plugin/platform). Also write you plugin/platform version only inside config.xml, not package.json to avoid confusion. See [this](https://github.com/driftyco/ionic-cli/issues/1324) for further informations. 
 
 ### <a name="webstorm"></a>Webstorm
 - Set code style for typesript:
