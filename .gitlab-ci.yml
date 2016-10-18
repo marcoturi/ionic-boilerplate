@@ -14,13 +14,6 @@ cache:
   paths:
     - node_modules/
 
-set_cli:
-  stage: test
-  only:
-    - master
-  script:
-    - ./sh/ionic-login.sh
-
 build_web:
   stage: test
   only:
@@ -34,10 +27,18 @@ build_web:
     - npm run build
     - npm run e2e
 
+build_ios:
+  stage: deploy
+  only:
+    - release
+  script:
+    - ./sh/ionic-login.sh
+    - ./sh/ionic-package-ios.sh
+
 build_android:
   stage: deploy
   only:
-    - master
+    - release
   script:
     - ls
     - npm run android:release
