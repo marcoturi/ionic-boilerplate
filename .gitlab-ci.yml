@@ -13,13 +13,13 @@ before_script:
 cache:
   paths:
     - node_modules/
+
+set_cli:
+  stage: test
   only:
     - master
   script:
     - ./sh/ionic-login.sh
-
-set_cli:
-  stage: test
 
 build_web:
   stage: test
