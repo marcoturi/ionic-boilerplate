@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0"></a>
+# [0.8.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.7.0...v0.8.0) (2016-10-18)
+
+
+### Features
+
+* **build:** add automatic ipa through ionic package ([b99d410](https://github.com/marcoturi/ionic2-boilerplate/commit/b99d410))
+* **build:** addin ionic cli login ([bfdfcfc](https://github.com/marcoturi/ionic2-boilerplate/commit/bfdfcfc))
+
+
+
 <a name="0.7.0"></a>
 # [0.7.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.6.0...v0.7.0) (2016-10-16)
 
