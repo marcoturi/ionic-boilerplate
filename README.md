@@ -8,7 +8,7 @@
 - [Installation & Configuration](#installation)
     - [Pre-Install Commands](#pre-install)
     - [NPM scripts commands](#npm-scripts)
-- [Tips](#Tips)
+- [Tips](#tips)
     - [Optional Libraries](#optional-libraries)
     - [Git Workflow](#git-workflow)
     - [Useful Links](#links)
@@ -72,7 +72,7 @@ Note: you should have ruby 2 installed to run scss-lint.
 | `android:dev`     | build .apk using dev environment vars                  |
 | `android:release` | build .apk with production environment vars            |
 
-## Tips
+## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
 - Error logging: [Sentry](https://docs.sentry.io/clients/javascript/integrations/angular2/)
 - Database: [PouchDB](https://pouchdb.com/) or [Ionic-storage](https://github.com/driftyco/ionic-storage). Don't use localstorage as it can be deleted by OS to free memory.
@@ -93,9 +93,9 @@ npm run push // this will run unit tests + push
 
 ### <a name="links"></a>Useful Links
 - [Search engine for find typescript typings](http://microsoft.github.io/TypeSearch/)
-
+- [Cordova-xcode 8](https://dpogue.ca/articles/cordova-xcode8.html)
 ### <a name="ionic-cordova"></a>Ionic & Cordova
-- Avoid the use of ionic state commands and also ionic plugin/platform. Use directly cordova prepare (or cordova plugin/platform). Also write you plugin/platform version only inside config.xml, not package.json to avoid confusion. See [this](https://github.com/driftyco/ionic-cli/issues/1324) for further informations. 
+- Avoid the use of ionic state commands and also ionic plugin/platform. Use directly cordova prepare (or cordova plugin/platform). Also save your plugin/platform only inside config.xml, not package.json to avoid confusion. See [this](https://github.com/driftyco/ionic-cli/issues/1324) for further informations. 
 
 ### <a name="webstorm"></a>Webstorm
 - Set code style for typesript:
