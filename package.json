@@ -49,6 +49,7 @@
     "run:before": "build --dev",
     "ios:dev": "bnr ios:dev",
     "ios:release": "bnr ios:release",
+    "ios:release:ci": "bnr ios:release:ci",
     "android:dev": "bnr android:dev",
     "android:release": "bnr android:release",
     "commit": "git-cz",
@@ -87,10 +88,17 @@
       }
     },
     "ios:release": {
-      "command": "npm run build && ionic build ios",
+      "command": "ionic build ios",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "ios"
+      }
+    },
+    "ios:release:ci": {
+      "command": "npm run build",
+      "env": {
+          "NODE_ENV": "production",
+          "PLATFORM": "ios"
       }
     },
     "android:dev": {
@@ -101,7 +109,7 @@
       }
     },
     "android:release": {
-      "command": "npm run build && ionic build android",
+      "command": "ionic build android",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "android"

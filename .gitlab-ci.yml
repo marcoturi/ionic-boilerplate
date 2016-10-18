@@ -33,6 +33,8 @@ build_ios:
     - release
   script:
     - ./sh/ionic-login.sh
+    - ls
+    - npm run ios:release:ci
     - ./sh/ionic-package-ios.sh
 
 build_android:
