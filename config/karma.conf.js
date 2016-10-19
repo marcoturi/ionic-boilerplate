@@ -1,79 +1,88 @@
-'use strict';
+module.exports = function(config) {
+    var testWebpackConfig = require('./webpack.test.js')({env: 'test'});
 
-const path = require('path');
-const tsConfig = require("../tsconfig.json");
-
-module.exports = function karmaConfig(config) {
     var configuration = {
+
         // base path that will be used to resolve all patterns (e.g. files, exclude)
-        basePath: '../',
+        basePath: '',
+
+        /*
+         * Frameworks to use
+         *
+         * available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+         */
         frameworks: ['jasmine'],
-        plugins: [
-            require('karma-jasmine'),
-            require('karma-rollup-plugin'),
-            require('karma-phantomjs-launcher'),
-            require('karma-mocha-reporter')
-            // require('karma-coverage'),
-            // require('karma-remap-coverage')
-        ],
-        reporters: ['mocha'], //'coverage', 'remap-coverage'],
-        files: ['config/karma-shim.ts'],
-        preprocessors: {'config/karma-shim.ts': ['rollup']}, //'coverage']},
-        rollupPreprocessor: {
-            // rollup settings. See Rollup documentation
-            plugins: [
-                require('rollup-plugin-angular')({
-                    exclude: 'node_modules/**'
-                }),
-                require('rollup-plugin-typescript')(Object.assign({}, tsConfig.compilerOptions, {
-                    typescript: require('../node_modules/typescript'),
-                    // sourceMap: true
-                })),
-                // require('rollup-plugin-istanbul')({
-                //     exclude: ['**/node_modules/**', '**/*.spec.ts', '**/config/**']
-                // }),
-                require('rollup-plugin-alias')({
-                    '@angular/core/testing': path.resolve(__dirname, '../node_modules/@angular/core/testing/index.js'),
-                    '@angular/platform-browser-dynamic/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser-dynamic/testing/index.js'),
-                    '@angular/compiler/testing': path.resolve(__dirname, '../node_modules/@angular/compiler/testing/index.js'),
-                    '@angular/platform-browser/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser/testing/index.js')
-                }),
-                require('rollup-plugin-commonjs')(),
-                require('rollup-plugin-node-resolve')({
-                    jsnext: true,
-                    main: true,
-                    browser: true}),
-                require('rollup-plugin-buble')()
-            ],
-            context: 'this',
-            // will help to prevent conflicts between different tests entries
-            format: 'iife',
-            // sourceMap: "inline"
+
+        // list of files to exclude
+        exclude: [ ],
+
+        /*
+         * list of files / patterns to load in the browser
+         *
+         * we are building the test environment in ./spec-bundle.js
+         */
+        files: [ { pattern: './karma-shim.js', watched: false } ],
+
+        /*
+         * preprocess matching files before serving them to the browser
+         * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+         */
+        preprocessors: { './karma-shim.js': ['coverage', 'webpack', 'sourcemap'] },
+
+        // Webpack Config at ./webpack.test.js
+        webpack: testWebpackConfig,
+
+        coverageReporter: {
+            type: 'in-memory'
         },
-        port: 9876,
-        colors: true,
-        logLevel: config.LOG_INFO,
-        autoWatch: true,
-        browsers: ['PhantomJS'],
-        singleRun: true
-        // coverageReporter: {
-        //     type: 'in-memory'
-        // },
+
         // remapCoverageReporter: {
-        //     'text-summary': null, // to show summary in console
-        //     html: './coverage/istanbul'
+        //     'text-summary': null,
+        //     json: './coverage/coverage.json',
+        //     html: './coverage/html'
         // },
-        // coverageReporter: {
-        //     dir : 'coverage/',
-        //     subdir: 'istanbul',
-        //     reporters: [{
-        //         type: 'text'
-        //     }, {
-        //         type: 'html'
-        //     }]
-        // }
+
+        // Webpack please don't spam the console when running in karma!
+        webpackMiddleware: { stats: 'errors-only'},
+
+        /*
+         * test results reporter to use
+         *
+         * possible values: 'dots', 'progress'
+         * available reporters: https://npmjs.org/browse/keyword/karma-reporter
+         */
+        reporters: [ 'mocha', 'coverage'], //, 'remap-coverage' ],
+
+        // web server port
+        port: 9876,
+
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
+
+        /*
+         * level of logging
+         * possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+         */
+        logLevel: config.LOG_INFO,
+
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: false,
+
+        /*
+         * start these browsers
+         * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+         */
+        browsers: [
+            'PhantomJS'
+        ],
+
+        /*
+         * Continuous Integration mode
+         * if true, Karma captures browsers, runs the tests and exits
+         */
+        singleRun: true
     };
+
 
     config.set(configuration);
 };
-
