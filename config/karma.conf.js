@@ -29,6 +29,9 @@ module.exports = function karmaConfig(config) {
                     typescript: require('../node_modules/typescript'),
                     // sourceMap: true
                 })),
+                require('rollup-plugin-commonjs')({
+                    sourceMap: false
+                }),
                 // require('rollup-plugin-istanbul')({
                 //     exclude: ['**/node_modules/**', '**/*.spec.ts', '**/config/**']
                 // }),
@@ -38,7 +41,7 @@ module.exports = function karmaConfig(config) {
                     '@angular/compiler/testing': path.resolve(__dirname, '../node_modules/@angular/compiler/testing/index.js'),
                     '@angular/platform-browser/testing': path.resolve(__dirname, '../node_modules/@angular/platform-browser/testing/index.js')
                 }),
-                require('rollup-plugin-commonjs')(),
+
                 require('rollup-plugin-node-resolve')({
                     jsnext: true,
                     main: true,

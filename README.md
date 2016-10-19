@@ -87,6 +87,7 @@ Note: you should have ruby 2 installed to run scss-lint.
 
 ## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
+If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash. Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash. Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](https://github.com/rollup/rollup/wiki/Troubleshooting) for further info.
 - Error logging: [Sentry](https://docs.sentry.io/clients/javascript/integrations/angular2/)
 - Database: [PouchDB](https://pouchdb.com/) or [Ionic-storage](https://github.com/driftyco/ionic-storage). Don't use localstorage as it can be deleted by OS to free memory.
 - Time and Dates: [MomentJs](http://momentjs.com/)
