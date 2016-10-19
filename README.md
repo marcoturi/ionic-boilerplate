@@ -23,7 +23,7 @@
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
 - ENV variables from package.json injected automatically by rollup
-- Continuous Integration with Gitlab CI ([see here for info](#gitlab-ci))
+- Continuous Integration with Gitlab CI [see here for info](#gitlab-ci)
     - Automatic apk only when pushing to release branch
     - Automatic ipa through ionic package only when pushing to release branch
     - [Docker image](https://github.com/marcoturi/ionic-docker)
@@ -32,7 +32,7 @@
     - E2E tests with protractor 
     - Screenshot reporter for protractor
     - ~~Coverage with istanbul~~ (see issue [#5](https://github.com/marcoturi/ionic2-boilerplate/issues/5))
-    - Gitlab badge ([see here for info](#gitlab-ci))
+    - Gitlab badge [see here for info](#gitlab-ci)
 - Linting
     - [SCSS Lint](https://github.com/HugoGiraudel/sass-boilerplate)
     - TSlint with [Codelyzer](https://github.com/mgechev/codelyzer)
