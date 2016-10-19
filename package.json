@@ -177,7 +177,6 @@
     "config": {
         "ghooks": {
             "pre-commit": "npm run lint && npm run scss-lint",
-            "pre-push": "npm test",
             "commit-msg": "validate-commit-msg"
         },
         "commitizen": {
