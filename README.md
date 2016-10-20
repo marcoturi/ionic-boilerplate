@@ -87,7 +87,7 @@ Note: you should have ruby 2 installed to run scss-lint.
 
 ## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
-If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash. Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash. Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](https://github.com/rollup/rollup/wiki/Troubleshooting) for further info.
+If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash. Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](https://github.com/rollup/rollup/wiki/Troubleshooting) for further info. To find examples on how to import 3rd party libs with ionic and rollup see [here](https://github.com/danbucholtz/ionic-third-party-lib-mega-test) and [here](http://ionicframework.com/docs/v2/resources/third-party-libs/)
 - Error logging: [Sentry](https://docs.sentry.io/clients/javascript/integrations/angular2/)
 - Database: [PouchDB](https://pouchdb.com/) or [Ionic-storage](https://github.com/driftyco/ionic-storage). Don't use localstorage as it can be deleted by OS to free memory.
 - Time and Dates: [MomentJs](http://momentjs.com/)
@@ -110,6 +110,7 @@ npm run push // this will run unit tests + push to master
 - [Search engine for find typescript typings](http://microsoft.github.io/TypeSearch/)
 - [Cordova-xcode 8](https://dpogue.ca/articles/cordova-xcode8.html)
 - [Ionic package setup](https://docs.ionic.io/services/package/)
+- [Useful Hooks](https://github.com/driftyco/ionic-package-hooks)
 
 ### <a name="ionic-cordova"></a>Ionic & Cordova
 - Avoid the use of ionic state commands and also ionic plugin/platform. Use directly cordova prepare (or cordova plugin/platform). Also save your plugin/platform only inside config.xml, not package.json to avoid confusion. See [this](https://github.com/driftyco/ionic-cli/issues/1324) for further informations. 
