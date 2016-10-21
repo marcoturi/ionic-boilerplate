@@ -6,6 +6,7 @@ stages:
 
 before_script:
   - npm prune
+  - npm install -g npm@3.10.8 cordova@6.3.1 ionic@2.1.1
   - npm install
   - gem install scss_lint
   - export DISPLAY=:99
