@@ -23,8 +23,8 @@ TestBed.initTestEnvironment(
 );
 
 // toreplace
-import '../src/pages/home/home.spec';
 import '../src/pages/contact/contact.spec';
+import '../src/pages/home/home.spec';
 // toreplace
 
 __karma__.start();
