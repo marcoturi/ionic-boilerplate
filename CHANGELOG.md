@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.8.0...v0.9.0) (2016-10-22)
+
+
+### Bug Fixes
+
+* **Docker:** move npm installs from Dockerfil to gitlab-cy.yml and update node to 6.9.1 ([3c320cb](https://github.com/marcoturi/ionic2-boilerplate/commit/3c320cb))
+* **gitlab:** fix docker error ([d1e2cf5](https://github.com/marcoturi/ionic2-boilerplate/commit/d1e2cf5))
+* **gitlab:** revert last commit ([a8171cc](https://github.com/marcoturi/ionic2-boilerplate/commit/a8171cc))
+* **npm:** fix dependencies error regarding ngc compiler ([3775162](https://github.com/marcoturi/ionic2-boilerplate/commit/3775162))
+
+
+### Features
+
+* **CI:** add automatic download of .ipa ([2274110](https://github.com/marcoturi/ionic2-boilerplate/commit/2274110))
+* **nvm:** update default node version to 6.9.1 LTS ([17f1d3e](https://github.com/marcoturi/ionic2-boilerplate/commit/17f1d3e))
+* **src:** add lodash-es example ([8602899](https://github.com/marcoturi/ionic2-boilerplate/commit/8602899))
+
+
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.7.0...v0.8.0) (2016-10-18)
 
