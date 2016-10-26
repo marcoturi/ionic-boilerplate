@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-home',
-    template: require('./home.html'),
+    template: './home.html',
 })
 export class HomePage {
     public user;
