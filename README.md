@@ -1,5 +1,5 @@
 # IONIC 2 Boilerplate
- [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) ![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg) [![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master)
+ [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) ![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg) [![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master) [![Join the chat at https://gitter.im/marcoturi/ionic2-boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marcoturi/ionic2-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
 ## Table of Contents
@@ -19,11 +19,11 @@
 
 ## <a name="features"></a>Features
 - Ionic RC1
-- Es-Lodash
+- [Es-Lodash](#optional-libraries)
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
 - ENV variables from package.json injected automatically by rollup
-- Continuous Integration with Gitlab CI ([see here for info](#gitlab-ci))
+- Continuous Integration with Gitlab CI [see here for info](#gitlab-ci)
     - Automatic apk only when pushing to release branch
     - Automatic ipa through ionic package only when pushing to release branch
     - [Docker image](https://github.com/marcoturi/ionic-docker)
@@ -32,7 +32,7 @@
     - E2E tests with protractor 
     - Screenshot reporter for protractor
     - ~~Coverage with istanbul~~ (see issue [#5](https://github.com/marcoturi/ionic2-boilerplate/issues/5))
-    - Gitlab badge ([see here for info](#gitlab-ci))
+    - Gitlab badge [see here for info](#gitlab-ci)
 - Linting
     - [SCSS Lint](https://github.com/HugoGiraudel/sass-boilerplate)
     - TSlint with [Codelyzer](https://github.com/mgechev/codelyzer)
@@ -87,6 +87,7 @@ Note: you should have ruby 2 installed to run scss-lint.
 
 ## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
+If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash (NOTE: [actually there are no typings available] (https://github.com/DefinitelyTyped/DefinitelyTyped/issues/7691), for this reason I used a wildcard in declarations.d.ts to disable every error regarding imports of libs without typings). Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](https://github.com/rollup/rollup/wiki/Troubleshooting) for further info. To find examples on how to import 3rd party libs with ionic and rollup see [here](https://github.com/danbucholtz/ionic-third-party-lib-mega-test) and [here](http://ionicframework.com/docs/v2/resources/third-party-libs/)
 - Error logging: [Sentry](https://docs.sentry.io/clients/javascript/integrations/angular2/)
 - Database: [PouchDB](https://pouchdb.com/) or [Ionic-storage](https://github.com/driftyco/ionic-storage). Don't use localstorage as it can be deleted by OS to free memory.
 - Time and Dates: [MomentJs](http://momentjs.com/)
@@ -109,6 +110,7 @@ npm run push // this will run unit tests + push to master
 - [Search engine for find typescript typings](http://microsoft.github.io/TypeSearch/)
 - [Cordova-xcode 8](https://dpogue.ca/articles/cordova-xcode8.html)
 - [Ionic package setup](https://docs.ionic.io/services/package/)
+- [Useful Hooks](https://github.com/driftyco/ionic-package-hooks)
 
 ### <a name="ionic-cordova"></a>Ionic & Cordova
 - Avoid the use of ionic state commands and also ionic plugin/platform. Use directly cordova prepare (or cordova plugin/platform). Also save your plugin/platform only inside config.xml, not package.json to avoid confusion. See [this](https://github.com/driftyco/ionic-cli/issues/1324) for further informations. 

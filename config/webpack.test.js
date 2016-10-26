@@ -1,3 +1,7 @@
+/**
+ * @author: @AngularClass
+ */
+
 const helpers = require('./helpers');
 const path = require('path');
 
@@ -96,17 +100,19 @@ module.exports = function (options) {
                  */
                 {
                     test: /\.ts$/,
-                    loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
-                    // loader: 'awesome-typescript-loader',
-                    // query: {
-                    //   compilerOptions: {
-                    //
-                    //     // Remove TypeScript helpers to be injected
-                    //     // below by DefinePlugin
-                    //     removeComments: true
-                    //
-                    //   }
-                    // },
+                    loader: 'awesome-typescript-loader',
+                    query: {
+                        // use inline sourcemaps for "karma-remap-coverage" reporter
+                        sourceMap: false,
+                        inlineSourceMap: true,
+                        compilerOptions: {
+
+                            // Remove TypeScript helpers to be injected
+                            // below by DefinePlugin
+                            removeComments: true
+
+                        }
+                    },
                     exclude: [/\.e2e\.ts$/]
                 },
 
@@ -143,24 +149,24 @@ module.exports = function (options) {
                     test: /\.html$/,
                     loader: 'raw-loader',
                     exclude: [helpers.root('src/index.html')]
-                }
+                },
 
-                // /**
-                //  * Instruments JS files with Istanbul for subsequent code coverage reporting.
-                //  * Instrument only testing sources.
-                //  *
-                //  * See: https://github.com/deepsweet/istanbul-instrumenter-loader
-                //  */
-                // {
-                //     enforce: 'post',
-                //     test: /\.(js|ts)$/,
-                //     loader: 'istanbul-instrumenter-loader',
-                //     include: helpers.root('src'),
-                //     exclude: [
-                //         /\.(e2e|spec)\.ts$/,
-                //         /node_modules/
-                //     ]
-                // }
+                /**
+                 * Instruments JS files with Istanbul for subsequent code coverage reporting.
+                 * Instrument only testing sources.
+                 *
+                 * See: https://github.com/deepsweet/istanbul-instrumenter-loader
+                 */
+                {
+                    enforce: 'post',
+                    test: /\.(js|ts)$/,
+                    loader: 'istanbul-instrumenter-loader',
+                    include: helpers.root('src'),
+                    exclude: [
+                        /\.(e2e|spec)\.ts$/,
+                        /node_modules/
+                    ]
+                }
 
             ]
         },
