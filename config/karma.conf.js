@@ -5,58 +5,21 @@ module.exports = function(config) {
 
         // base path that will be used to resolve all patterns (e.g. files, exclude)
         basePath: '',
-
-        /*
-         * Frameworks to use
-         *
-         * available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-         */
         frameworks: ['jasmine'],
-
-        // list of files to exclude
-        exclude: [ ],
-
-        /*
-         * list of files / patterns to load in the browser
-         *
-         * we are building the test environment in ./spec-bundle.js
-         */
-        files: [ { pattern: './karma-shim.js', watched: false } ],
-
-        /*
-         * preprocess matching files before serving them to the browser
-         * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-         */
-        preprocessors: { './karma-shim.js': ['coverage', 'webpack', 'sourcemap'] },
-
-        // Webpack Config at ./webpack.test.js
+        files: [ { pattern: './config/karma-shim.js', watched: false } ],
+        preprocessors: { './config/karma-shim.js': ['coverage', 'webpack', 'sourcemap'] },
         webpack: testWebpackConfig,
-
         coverageReporter: {
             type: 'in-memory'
         },
-
         remapCoverageReporter: {
             'text-summary': null,
             json: './coverage/coverage.json',
             html: './coverage/html'
         },
-
-        // Webpack please don't spam the console when running in karma!
         webpackMiddleware: { stats: 'errors-only'},
-
-        /*
-         * test results reporter to use
-         *
-         * possible values: 'dots', 'progress'
-         * available reporters: https://npmjs.org/browse/keyword/karma-reporter
-         */
         reporters: [ 'mocha', 'coverage', 'remap-coverage' ],
-
-        // web server port
         port: 9876,
-
-        // enable / disable colors in the output (reporters and logs)
         colors: true,
 
         /*
@@ -73,13 +36,8 @@ module.exports = function(config) {
          * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
          */
         browsers: [
-            'PhantomJS'
+            'Chrome'
         ],
-
-        /*
-         * Continuous Integration mode
-         * if true, Karma captures browsers, runs the tests and exits
-         */
         singleRun: true
     };
 

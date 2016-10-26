@@ -105,12 +105,9 @@ module.exports = function (options) {
                         // use inline sourcemaps for "karma-remap-coverage" reporter
                         sourceMap: false,
                         inlineSourceMap: true,
+                        module: "commonjs",
                         compilerOptions: {
-
-                            // Remove TypeScript helpers to be injected
-                            // below by DefinePlugin
                             removeComments: true
-
                         }
                     },
                     exclude: [/\.e2e\.ts$/]

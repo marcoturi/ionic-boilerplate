@@ -4,7 +4,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { mockNavController } from 'ionic-angular/util/mock-providers';
 import { NavController } from 'ionic-angular';
 
-describe('Sales Service', () => {
+describe('Home Page:', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -18,11 +18,17 @@ describe('Sales Service', () => {
         TestBed.compileComponents();
     }));
 
-    it('should log ngOnInit', inject([ HomePage ], (home: HomePage) => {
-        // const fixture = TestBed.createComponent(home);
-        // fixture.detectChanges();
+    it('Barney should be the user', inject([HomePage], (home: HomePage) => {
         expect(home.user).toEqual({
             name: 'barney',
+            age: 36,
+            active: true,
+        });
+    }));
+
+    it('Fred should not be the user', inject([HomePage], (home: HomePage) => {
+        expect(home.user).not.toEqual({
+            name: 'fred',
             age: 36,
             active: true,
         });
