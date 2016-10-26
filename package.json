@@ -32,6 +32,7 @@
         "deploy:before": "build",
         "build:before": "build",
         "run:before": "build --dev",
+        "build --dev": "npm run build --dev",
         "ios:dev": "bnr ios:dev",
         "ios:release": "bnr ios:release",
         "ios:release:ci": "bnr ios:release:ci",
