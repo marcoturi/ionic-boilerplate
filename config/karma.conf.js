@@ -3,7 +3,7 @@
 const path = require('path');
 const tsConfig = require("../tsconfig.json");
 
-module.exports = function karmaConfig(config) {
+module.exports = (config) => {
     var configuration = {
         // base path that will be used to resolve all patterns (e.g. files, exclude)
         basePath: '../',
@@ -26,12 +26,10 @@ module.exports = function karmaConfig(config) {
                     exclude: 'node_modules/**'
                 }),
                 require('rollup-plugin-typescript')(Object.assign({}, tsConfig.compilerOptions, {
-                    typescript: require('../node_modules/typescript'),
+                    typescript: require('typescript'),
                     // sourceMap: true
                 })),
-                require('rollup-plugin-commonjs')({
-                    sourceMap: false
-                }),
+                require('rollup-plugin-commonjs')({}),
                 // require('rollup-plugin-istanbul')({
                 //     exclude: ['**/node_modules/**', '**/*.spec.ts', '**/config/**']
                 // }),
