@@ -1,7 +1,7 @@
 {
     "name": "ionic2-boilerplate",
-    "author": "Marco Turi",
-    "version": "0.8.0",
+    "version": "0.9.0",
+    "description": "An Ionic 2 Rollup Starter kit featuring Ionic, Karma, Protractor, Jasmine, CI, and much more",
     "keywords": [
         "ionic2",
         "angular2",
@@ -12,29 +12,14 @@
         "istanbul",
         "gitlab CI"
     ],
-    "maintainers": [
-        {
-            "name": "marcoturi",
-            "email": "marco.turi@hotmail.it"
-        }
-    ],
-    "private": false,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/marcoturi/ionic2-boilerplate"
-    },
-    "bugs": {
-        "url": "https://github.com/marcoturi/ionic2-boilerplate/issues"
-    },
-    "engines": {
-        "node": ">= 6.6.0",
-        "npm": ">= 3"
-    },
+    "author": "Marco Turi <marco.turi@hotmail.it>",
+    "homepage": "https://github.com/marcoturi/ionic2-boilerplate",
+    "license": "MIT",
     "scripts": {
         "dev": "bnr dev",
         "build": "bnr build",
+        "build-dev": "bnr build-dev",
         "test": "bnr test",
-        "pretest:watch": "node config/karma-watch.js --persistent=true &",
         "test:watch": "bnr test --auto-watch --no-single-run",
         "pree2e": "cd www && python -m SimpleHTTPServer 8090 >> ../python_serve.log 2>&1 &",
         "e2e": "protractor config/protractor.conf.js",
@@ -45,13 +30,14 @@
         "emulate:before": "build",
         "deploy:before": "build",
         "build:before": "build",
-        "run:before": "build --dev",
+        "run:before": "build-dev",
         "ios:dev": "bnr ios:dev",
         "ios:release": "bnr ios:release",
         "ios:release:ci": "bnr ios:release:ci",
         "android:dev": "bnr android:dev",
         "android:release": "bnr android:release",
         "commit": "git-cz",
+        "docs": "typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/",
         "release": "standard-version --no-verify",
         "push": "git push --follow-tags origin master",
         "lint": "tslint \"src/**/*.ts\" --exclude=src/**/*.d.ts",
@@ -60,7 +46,7 @@
     },
     "betterScripts": {
         "dev": {
-            "command": "ionic serve --bundler=webpack",
+            "command": "ionic serve",
             "env": {
                 "NODE_ENV": "development",
                 "PLATFORM": "web"
@@ -69,8 +55,13 @@
         "build": {
             "command": "ionic-app-scripts build",
             "env": {
-                "NODE_ENV": "production",
-                "PLATFORM": "web"
+                "NODE_ENV": "production"
+            }
+        },
+        "build-dev": {
+            "command": "ionic-app-scripts build --dev",
+            "env": {
+                "NODE_ENV": "development"
             }
         },
         "test": {
@@ -134,15 +125,15 @@
         "lodash-es": "^4.16.4"
     },
     "devDependencies": {
-        "@ionic/app-scripts": "github:driftyco/ionic-app-scripts",
-        "@types/jasmine": "2.5.35",
+        "@ionic/app-scripts": "0.0.37-2",
+        "@types/jasmine": "2.5.36",
         "angular2-template-loader": "^0.5.0",
         "awesome-typescript-loader": "2.2.4",
         "better-npm-run": "0.0.12",
         "chokidar": "^1.6.0",
         "codelyzer": "1.0.0-beta.0",
         "commitizen": "^2.8.6",
-        "copy-webpack-plugin": "^3.0.1",
+        "copy-webpack-plugin": "^4.0.0",
         "css-loader": "^0.25.0",
         "exports-loader": "^0.6.3",
         "expose-loader": "^0.7.1",
@@ -185,6 +176,7 @@
     "config": {
         "ghooks": {
             "pre-commit": "npm run lint && npm run scss-lint",
+            "pre-push": "npm test",
             "commit-msg": "validate-commit-msg"
         },
         "commitizen": {
@@ -193,6 +185,15 @@
         "ionic_rollup": "./config/rollup.config.js",
         "ionic_watch": "./config/watch.config.js"
     },
-    "description": "ionic2-boilerplate: An Ionic project",
-    "license": "MIT"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marcoturi/ionic2-boilerplate"
+    },
+    "bugs": {
+        "url": "https://github.com/marcoturi/ionic2-boilerplate/issues"
+    },
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3"
+    }
 }
