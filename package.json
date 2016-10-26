@@ -18,6 +18,7 @@
     "scripts": {
         "dev": "bnr dev",
         "build": "bnr build",
+        "build-dev": "bnr build-dev",
         "pretest": "node config/karma-watch.js --persistent=false",
         "test": "bnr test",
         "pretest:watch": "node config/karma-watch.js --persistent=true &",
@@ -31,8 +32,7 @@
         "emulate:before": "build",
         "deploy:before": "build",
         "build:before": "build",
-        "run:before": "build --dev",
-        "build --dev": "npm run build --dev",
+        "run:before": "build-dev",
         "ios:dev": "bnr ios:dev",
         "ios:release": "bnr ios:release",
         "ios:release:ci": "bnr ios:release:ci",
@@ -57,8 +57,13 @@
         "build": {
             "command": "ionic-app-scripts build",
             "env": {
-                "NODE_ENV": "production",
-                "PLATFORM": "web"
+                "NODE_ENV": "production"
+            }
+        },
+        "build-dev": {
+            "command": "ionic-app-scripts build --dev",
+            "env": {
+                "NODE_ENV": "development"
             }
         },
         "test": {
