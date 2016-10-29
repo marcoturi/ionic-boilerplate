@@ -4,7 +4,7 @@ import filter from 'lodash-es/filter';
 
 @Component({
     selector: 'page-home',
-    template: './home.html',
+    templateUrl: './home.html',
 })
 export class HomePage {
     public user;

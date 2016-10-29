@@ -4,11 +4,6 @@
         "declaration": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "noEmitHelpers": true,
-        "strictNullChecks": false,
-        "baseUrl": "./src",
-        "paths": {
-        },
         "lib": [
             "dom",
             "es2015"
@@ -21,7 +16,6 @@
         "node_modules"
     ],
     "compileOnSave": false,
-    "buildOnSave": false,
     "atom": {
         "rewriteTsconfig": false
     },

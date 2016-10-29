@@ -1,3 +1,4 @@
+const helpers = require('./helpers');
 const SSReporter = require('protractor-jasmine2-screenshot-reporter');
 
 const screenshotReporter = new SSReporter ({
@@ -19,15 +20,15 @@ exports.config = {
     },
     framework: 'jasmine2',
     specs: [
-        '../src/**/**.e2e.ts',
-        '../src/**/*.e2e.ts'
+        helpers.root('src/**/**.e2e.ts'),
+        helpers.root('src/**/*.e2e.ts')
     ],
     directConnect: true,
     jasmineNodeOpts: {
         showColors: true, // If true, print colors to the terminal.
         showTiming: true,
         defaultTimeoutInterval: 30000, // Default time to wait in ms before a config fails.
-        isVerbose: true,
+        isVerbose: false,
         includeStackTrace: false
     },
     baseUrl: 'http://localhost:8090',
