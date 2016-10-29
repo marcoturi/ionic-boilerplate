@@ -1,5 +1,7 @@
 module.exports = (config) => {
 
+    var testWebpackConfig = require('./webpack.test.js')({env: 'test'});
+
     const configuration = {
 
         // base path that will be used to resolve all patterns (e.g. files, exclude)
@@ -7,17 +9,9 @@ module.exports = (config) => {
         frameworks: ['jasmine'],
         files: [ { pattern: './config/karma-shim.js', watched: false } ],
         preprocessors: { './config/karma-shim.js': ['coverage', 'webpack', 'sourcemap'] },
-        webpack: require('./webpack.test.js'),
+        webpack: testWebpackConfig,
         webpackMiddleware: { stats: 'errors-only'},
-        reporters: [ 'mocha', 'coverage', 'remap-coverage'],
-        coverageReporter: {
-            type: 'in-memory'
-        },
-        remapCoverageReporter: {
-            'text-summary': null,
-            json: './coverage/coverage.json',
-            html: './coverage/html'
-        },
+        reporters: [ 'mocha'],
         port: 9876,
         colors: true,
         /*
@@ -32,22 +26,22 @@ module.exports = (config) => {
          * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
          */
         browsers: [
-            'Chrome'
+            'PhantomJS'
         ],
         singleRun: true
     };
 
     if(process.env.NO_COVERAGE !== 'true') {
-        // configuration.reporters.push( 'coverage', 'remap-coverage');
-        // configuration.coverageReporter = {
-        //     type: 'in-memory'
-        // };
-        //
-        // configuration.remapCoverageReporter = {
-        //     'text-summary': null,
-        //     json: './coverage/coverage.json',
-        //     html: './coverage/html'
-        // };
+        configuration.reporters.push( 'coverage', 'remap-coverage');
+        configuration.coverageReporter = {
+            type: 'in-memory'
+        };
+
+        configuration.remapCoverageReporter = {
+            'text-summary': null,
+            json: './coverage/coverage.json',
+            html: './coverage/html'
+        };
     }
 
 

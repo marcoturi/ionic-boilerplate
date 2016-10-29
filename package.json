@@ -132,7 +132,7 @@
     "lodash-es": "^4.16.4"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "0.0.37-2",
+    "@ionic/app-scripts": "0.0.38",
     "@types/jasmine": "2.5.36",
     "angular2-template-loader": "^0.5.0",
     "awesome-typescript-loader": "^2.2.1",
@@ -189,7 +189,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     },
-    "ionic_rollup": "./config/rollup.config.js",
     "ionic_watch": "./config/watch.config.js"
   },
   "repository": {

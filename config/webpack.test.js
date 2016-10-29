@@ -30,7 +30,7 @@ module.exports = (options) => {
      * See: https://github.com/gotwarlost/istanbul/issues/212
      *
      */
-    let postLoaders = null;
+    let postLoaders = {};
     if (coverageEnabled) {
         postLoaders = {
             enforce: 'post',
