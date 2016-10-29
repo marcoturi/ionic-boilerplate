@@ -1,29 +1,49 @@
-/**
- * @author: @AngularClass
- */
-
 const helpers = require('./helpers');
 const path = require('path');
 
-/**
- * Webpack Plugins
- */
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
-/**
- * Webpack Constants
- */
 const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
+const coverageEnabled = process.env.NO_COVERAGE !== 'true';
+
 
 /**
  * Webpack configuration
  *
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
-module.exports = function (options) {
+module.exports = (options) => {
+
+    /**
+     * Instruments JS files with Istanbul for subsequent code coverage reporting.
+     * Instrument only testing sources.
+     *
+     * See: https://github.com/deepsweet/istanbul-instrumenter-loader
+     *
+     * @hack: Disabling coverage if NO_COVERAGE env var is set to 'true'.
+     * This is useful for karma debug.
+     *
+     * See: https://github.com/AngularClass/angular2-webpack-starter/issues/361?_pjax=%23js-repo-pjax-container
+     * See: https://github.com/gotwarlost/istanbul/issues/212
+     *
+     */
+    let postLoaders = null;
+    if (coverageEnabled) {
+        postLoaders = {
+            enforce: 'post',
+            test: /\.(js|ts)$/, loader: 'istanbul-instrumenter-loader',
+            include: helpers.root('src'),
+            exclude: [
+                /\.(e2e|spec)\.ts$/,
+                /node_modules/
+            ]
+        };
+
+    }
+
     return {
 
         /**
@@ -103,8 +123,8 @@ module.exports = function (options) {
                     loader: 'awesome-typescript-loader',
                     query: {
                         // use inline sourcemaps for "karma-remap-coverage" reporter
-                        sourceMap: false,
-                        inlineSourceMap: true,
+                        sourceMap: !coverageEnabled,
+                        inlineSourceMap: coverageEnabled,
                         module: "commonjs",
                         compilerOptions: {
                             removeComments: true
@@ -148,23 +168,7 @@ module.exports = function (options) {
                     exclude: [helpers.root('src/index.html')]
                 },
 
-                /**
-                 * Instruments JS files with Istanbul for subsequent code coverage reporting.
-                 * Instrument only testing sources.
-                 *
-                 * See: https://github.com/deepsweet/istanbul-instrumenter-loader
-                 */
-                {
-                    enforce: 'post',
-                    test: /\.(js|ts)$/,
-                    loader: 'istanbul-instrumenter-loader',
-                    include: helpers.root('src'),
-                    exclude: [
-                        /\.(e2e|spec)\.ts$/,
-                        /node_modules/
-                    ]
-                }
-
+                postLoaders
             ]
         },
 
