@@ -22,6 +22,7 @@
 - [Es-Lodash](#optional-libraries)
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
+- Documentation with Typedoc
 - ENV variables from package.json injected automatically by rollup
 - Continuous Integration with Gitlab CI [see here for info](#gitlab-ci)
     - Automatic apk only when pushing to release branch
@@ -43,7 +44,7 @@
 
 ## <a name="roadmap"></a>Roadmap
 - Automatic download .ipa in gitlab artificts
-- Documentation with typedoc ([waiting a new release that supports ts 2.0](https://github.com/TypeStrong/typedoc/issues/234))
+
 
 ## <a name="installation"></a>Installation & Configuration
 ### <a name="pre-install"></a>Pre-Install Commands
