@@ -1,7 +1,7 @@
 {
     "name": "ionic2-boilerplate",
     "version": "0.9.0",
-    "description": "An Ionic 2 Rollup Starter kit featuring Ionic, Karma, Protractor, Jasmine, CI, and much more",
+    "description": "An Ionic 2 Starter kit featuring Ionic, Karma, Protractor, Jasmine, CI, and much more",
     "keywords": [
         "ionic2",
         "angular2",
@@ -24,7 +24,7 @@
         "pree2e": "cd www && python -m SimpleHTTPServer 8090 >> ../python_serve.log 2>&1 &",
         "e2e": "protractor",
         "pree2e:interactive": "npm run pree2e",
-        "e2e:interactive": "protractor config/protractor.conf.js --elementExplorer",
+        "e2e:interactive": "protractor --elementExplorer",
         "watch": "ionic-app-scripts watch",
         "serve:before": "watch",
         "emulate:before": "build",
@@ -190,7 +190,8 @@
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         },
-        "ionic_watch": "./config/watch.config.js"
+        "ionic_watch": "./config/watch.config.js",
+        "ionic_webpack": "./config/webpack.config.js"
     },
     "repository": {
         "type": "git",

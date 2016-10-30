@@ -2,6 +2,7 @@
  [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) ![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg) [![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master) [![Join the chat at https://gitter.im/marcoturi/ionic2-boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marcoturi/ionic2-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
+NOTE: I moved Unit tests from running through rollup to webpack with release 1.0.0. If you are looking to the old configuration see the [rolluo](https://github.com/marcoturi/ionic2-boilerplate/tree/rollup) branch.
 ## Table of Contents
 - [Features](#features)
 - [Roadmap](#roadmap)
@@ -22,7 +23,8 @@
 - [Es-Lodash](#optional-libraries)
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
-- ENV variables from package.json injected automatically by rollup
+- ENV variables from package.json injected automatically
+- Documentation with [Typedoc](https://github.com/TypeStrong/typedoc/)
 - Continuous Integration with Gitlab CI [see here for info](#gitlab-ci)
     - Automatic apk only when pushing to release branch
     - Automatic ipa through ionic package only when pushing to release branch
@@ -31,7 +33,7 @@
     - Unit tests with karma
     - E2E tests with protractor 
     - Screenshot reporter for protractor
-    - ~~Coverage with istanbul~~ (see issue [#5](https://github.com/marcoturi/ionic2-boilerplate/issues/5))
+    - Coverage with istanbul
     - Gitlab badge [see here for info](#gitlab-ci)
 - Linting
     - [SCSS Lint](https://github.com/HugoGiraudel/sass-boilerplate)
@@ -43,7 +45,6 @@
 
 ## <a name="roadmap"></a>Roadmap
 - Automatic download .ipa in gitlab artificts
-- Documentation with typedoc ([waiting a new release that supports ts 2.0](https://github.com/TypeStrong/typedoc/issues/234))
 
 ## <a name="installation"></a>Installation & Configuration
 ### <a name="pre-install"></a>Pre-Install Commands
@@ -53,26 +54,26 @@ gem install scss_lint
 ionic state restore
 ./node_modules/.bin/webdriver-manager update
 ```
-Note: you should have ruby 2 installed to run scss-lint.
+Note: you should have ruby 2 installed to run scss-lint and python to run e2e tests.
 
 ### <a name="npm-scripts"></a>NPM scripts commands
 | Task              | Description                                            |
 |-------------------|--------------------------------------------------------|
-| `dev`             | run ionic serve                                        |
+| `dev`             | Run ionic serve                                        |
 | `build`           | Full production build. Use `--dev` flag for dev build. |
-| `release`         | generate changelog based on commits                    |
-| `push`            | shortcut for git push origin master --follow-tags      |
-| `lint`            | lint with tslint                                       |
-| `scss-lint`       | lint scss                                              |
-| `test`            | runs Karma test                                        |
-| `test:watch`      | runs Karma test watching for edits (usefull for TDD)   |
-| `e2e`             | runs e2e protractor tests                              |
-| `e2e:interactive` | runs e2e protractor tests in interactive mode          |
-| `outdated`        | search npm packages for outdated dependencies          |
-| `ios:dev`         | build .ipa using dev environment vars                  |
-| `ios:release`     | build .ipa with production environment vars            |
-| `android:dev`     | build .apk using dev environment vars                  |
-| `android:release` | build .apk with production environment vars            |
+| `release`         | Generate changelog based on commits                    |
+| `push`            | Shortcut for git push origin master --follow-tags      |
+| `lint`            | Lint with tslint                                       |
+| `scss-lint`       | Lint scss                                              |
+| `test`            | Runs Karma test                                        |
+| `test:watch`      | Runs Karma test watching for edits (TDD style)         |
+| `e2e`             | Runs e2e protractor tests                              |
+| `e2e:interactive` | Runs e2e protractor tests in interactive mode          |
+| `outdated`        | Search npm packages for outdated dependencies          |
+| `ios:dev`         | Build .ipa using dev environment vars                  |
+| `ios:release`     | Build .ipa with production environment vars            |
+| `android:dev`     | Build .apk using dev environment vars                  |
+| `android:release` | Build .apk with production environment vars            |
 
 ### <a name="gitlab-ci"></a>Gitlab CI Configuration
 - To get code coverage percentage badge use the following regexp: `All files(?:\s*\|\s*\d*\.?\d+\s*){3}\|\s*((\d*\.?\d+))\s*\|` in Gitlab CI/CD pipelines.

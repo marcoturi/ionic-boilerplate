@@ -1,3 +1,8 @@
+/**
+ * This config file was inspired by https://github.com/AngularClass/angular2-webpack-starter/
+ * all credits go to them!
+ */
+
 const helpers = require('./helpers');
 const path = require('path');
 
@@ -192,11 +197,9 @@ module.exports = (options) => {
             // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
             new DefinePlugin({
                 'ENV': JSON.stringify(ENV),
-                'HMR': false,
                 'process.env': {
                     'ENV': JSON.stringify(ENV),
-                    'NODE_ENV': JSON.stringify(ENV),
-                    'HMR': false,
+                    'NODE_ENV': JSON.stringify(ENV)
                 }
             }),
 
