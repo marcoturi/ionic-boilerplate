@@ -125,7 +125,8 @@ module.exports = (options) => {
                         // use inline sourcemaps for "karma-remap-coverage" reporter
                         sourceMap: !coverageEnabled,
                         inlineSourceMap: coverageEnabled,
-                        module: "commonjs",
+                        module: 'commonjs',
+                        noEmitHelpers: true,
                         compilerOptions: {
                             removeComments: true
                         }

@@ -16,7 +16,7 @@ describe('Home Page:', () => {
 
     it('Barney should be the user', inject([HomePage], (home: HomePage) => {
         expect(home.user).toEqual({
-            name: 'barney',
+            name: 'barney2',
             age: 36,
             active: true,
         });

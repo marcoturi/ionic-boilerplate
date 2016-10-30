@@ -9,7 +9,7 @@ describe('LoggerService', () => {
         loggerService = new LoggerService(mockPlatform());
     });
 
-    describe('.create()2', () => {
+    describe('.create()', () => {
         it('should create a Logger with prefix', () => {
             const prefix = 'BlackwellAcademy';
             const logger = loggerService.create(prefix);
