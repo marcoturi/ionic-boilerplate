@@ -2,7 +2,7 @@
  [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) ![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg) [![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master) [![Join the chat at https://gitter.im/marcoturi/ionic2-boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marcoturi/ionic2-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
-NOTE: I moved Unit tests from running through rollup to webpack with release 0.10.0. If you are looking to the old configuration see the [rolluo](https://github.com/marcoturi/ionic2-boilerplate/tree/rollup) branch.
+NOTE: I moved Unit tests from running through rollup to webpack with release 0.10.0. If you are looking to the old configuration see the [rollup](https://github.com/marcoturi/ionic2-boilerplate/tree/rollup) branch.
 ## Table of Contents
 - [Features](#features)
 - [Roadmap](#roadmap)
@@ -51,7 +51,7 @@ NOTE: I moved Unit tests from running through rollup to webpack with release 0.1
 ```
 npm i -g cordova ionic
 gem install scss_lint
-ionic state restore
+npm i
 ./node_modules/.bin/webdriver-manager update
 ```
 Note: you should have ruby 2 installed to run scss-lint and python to run e2e tests.
