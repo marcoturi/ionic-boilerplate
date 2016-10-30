@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file.
 
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.9.0...v0.10.0) (2016-10-30)
@@ -8,20 +8,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* **app:** clearing src, protractor (working 100%) ([a61ccb3](https://github.com/marcoturi/ionic2-boilerplate/commit/a61ccb3))
-* **karma:** fix configuration to reload correctly the spec files ([9fd5d2f](https://github.com/marcoturi/ionic2-boilerplate/commit/9fd5d2f))
-* **test:** fix karma ([edbccec](https://github.com/marcoturi/ionic2-boilerplate/commit/edbccec))
-* **test:** temporary disabling tests ([e17074a](https://github.com/marcoturi/ionic2-boilerplate/commit/e17074a))
 * **typescript:** less generic declaration file, close [#9](https://github.com/marcoturi/ionic2-boilerplate/issues/9) ([acd1a6b](https://github.com/marcoturi/ionic2-boilerplate/commit/acd1a6b))
-* **webpack:** fixing template bug ([4591b9e](https://github.com/marcoturi/ionic2-boilerplate/commit/4591b9e))
 
 
 ### Features
 
-* **build:** init webpack ([7fadd12](https://github.com/marcoturi/ionic2-boilerplate/commit/7fadd12))
+* **build:** move unit tests to webpack build system instead of rollup ([7fadd12](https://github.com/marcoturi/ionic2-boilerplate/commit/7fadd12))
 * **docs:** add typedoc ([9cb624e](https://github.com/marcoturi/ionic2-boilerplate/commit/9cb624e))
 * **env:** add webpack env injection ([2d4afef](https://github.com/marcoturi/ionic2-boilerplate/commit/2d4afef))
-* **test:** remove coverage while test:watch is run ([ec5c2e4](https://github.com/marcoturi/ionic2-boilerplate/commit/ec5c2e4))
 
 
 
@@ -30,10 +24,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 ### Bug Fixes
-
-* **Docker:** move npm installs from Dockerfil to gitlab-cy.yml and update node to 6.9.1 ([3c320cb](https://github.com/marcoturi/ionic2-boilerplate/commit/3c320cb))
 * **gitlab:** fix docker error ([d1e2cf5](https://github.com/marcoturi/ionic2-boilerplate/commit/d1e2cf5))
-* **gitlab:** revert last commit ([a8171cc](https://github.com/marcoturi/ionic2-boilerplate/commit/a8171cc))
 * **npm:** fix dependencies error regarding ngc compiler ([3775162](https://github.com/marcoturi/ionic2-boilerplate/commit/3775162))
 
 
@@ -52,7 +43,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * **build:** add automatic ipa through ionic package ([b99d410](https://github.com/marcoturi/ionic2-boilerplate/commit/b99d410))
-* **build:** addin ionic cli login ([bfdfcfc](https://github.com/marcoturi/ionic2-boilerplate/commit/bfdfcfc))
+* **build:** ionic cli login ([bfdfcfc](https://github.com/marcoturi/ionic2-boilerplate/commit/bfdfcfc))
 
 
 
