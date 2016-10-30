@@ -39,8 +39,7 @@ module.exports = (config) => {
 
         configuration.remapCoverageReporter = {
             'text-summary': null,
-            json: './coverage/coverage.json',
-            html: './coverage/html'
+            html: './coverage/istanbul'
         };
     }
 

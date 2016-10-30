@@ -76,7 +76,7 @@ Note: you should have ruby 2 installed to run scss-lint and python to run e2e te
 | `android:release` | Build .apk with production environment vars            |
 
 ### <a name="gitlab-ci"></a>Gitlab CI Configuration
-- To get code coverage percentage badge use the following regexp: `All files(?:\s*\|\s*\d*\.?\d+\s*){3}\|\s*((\d*\.?\d+))\s*\|` in Gitlab CI/CD pipelines.
+- To get code coverage percentage badge use the following regexp: `Lines\s*:\s*(\d*\.?\d+)%` in Gitlab CI/CD pipelines.
 - To get the automatic .ipa from ionic package first setup a ionic.io profile with certificates for ios. Secondly add the following Secret variables in Gitlab. N.B. Be sure to don't show Build results (edit project settings) for your repo otherwise those vars could be exposed.
 
 | Key                            | Description                                                                                                      |
