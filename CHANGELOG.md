@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="0.10.1"></a>
 ## [0.10.1](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.10.0...v0.10.1) (2016-10-30)
-
+- This release cleared unused npm dependencies and karma conf
 
 
 <a name="0.10.0"></a>
