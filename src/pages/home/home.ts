@@ -23,8 +23,6 @@ export class HomePage {
             }];
 
         this.user = (filter(myArr, o => o.active))[0];
-
-        console.log(process.env);
     }
 
 }

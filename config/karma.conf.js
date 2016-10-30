@@ -1,6 +1,6 @@
 module.exports = (config) => {
 
-    var testWebpackConfig = require('./webpack.test.js')({env: 'test'});
+    var testWebpackConfig = require('./webpack.test.js')({});
 
     const configuration = {
 
