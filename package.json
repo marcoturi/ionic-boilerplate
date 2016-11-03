@@ -129,11 +129,11 @@
     "ionic-native": "^2.2.6",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "0.6.21",
-    "lodash-es": "^4.16.4"
+    "lodash-es": "^4.16.6"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "0.0.38",
-    "@types/jasmine": "2.5.36",
+    "@ionic/app-scripts": "0.0.39",
+    "@types/jasmine": "2.5.37",
     "awesome-typescript-loader": "^2.2.1",
     "better-npm-run": "0.0.13",
     "codelyzer": "1.0.0-beta.0",

@@ -6,12 +6,16 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": false,
+    "declaration": false,
+    "sourceMap": true,
     "lib": [
       "dom",
       "es2015"
     ]
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ],
