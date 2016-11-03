@@ -17,6 +17,7 @@ NOTE: I moved Unit tests from running through rollup to webpack with release 0.1
     - [Ionic & Cordova](#ionic-cordova)
     - [Webstorm](#webstorm)
     - [Windows](#windows)
+- [License](#license)
 
 ## <a name="features"></a>Features
 - Ionic RC1
@@ -69,6 +70,7 @@ Note: you should have ruby 2 installed to run scss-lint and python to run e2e te
 | `test:watch`      | Runs Karma test watching for edits (TDD style)         |
 | `e2e`             | Runs e2e protractor tests                              |
 | `e2e:interactive` | Runs e2e protractor tests in interactive mode          |
+| `docs`            | Generate code documentation through Typedoc            |
 | `outdated`        | Search npm packages for outdated dependencies          |
 | `ios:dev`         | Build .ipa using dev environment vars                  |
 | `ios:release`     | Build .ipa with production environment vars            |
@@ -134,3 +136,6 @@ npm run push // this will run unit tests + push to master
 - Set webstorm to write with line endingds LF (mac os or unix)
 - To avoid git warnings: git config core.autocrlf false
 - e2e commands is not working on windows, because the python server can't be launched. As a workaround add START /B before python -m and remove & at the end of the line in package.json. Anyway you will have to kill manually the process every time after every execution.
+
+## <a name="license"></a>License
+    Source code is open source and released under the MIT license.
