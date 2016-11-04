@@ -20,7 +20,7 @@ NOTE: I moved Unit tests from running through rollup to webpack with release 0.1
 - [License](#license)
 
 ## <a name="features"></a>Features
-- Ionic RC1
+- Ionic RC2
 - [Es-Lodash](#optional-libraries)
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
@@ -138,4 +138,5 @@ npm run push // this will run unit tests + push to master
 - e2e commands is not working on windows, because the python server can't be launched. As a workaround add START /B before python -m and remove & at the end of the line in package.json. Anyway you will have to kill manually the process every time after every execution.
 
 ## <a name="license"></a>License
+    Copyright (c) 2016 Marco Turi
     Source code is open source and released under the MIT license.
