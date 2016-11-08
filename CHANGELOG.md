@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="0.10.2"></a>
 ## [0.10.2](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.10.1...v0.10.2) (2016-11-04)
-
+- Update to Ionic rc2
 
 
 <a name="0.10.1"></a>
