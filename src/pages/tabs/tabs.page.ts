@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { HomePage } from '../home/home';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { HomePage } from '../home/home.page';
+import { AboutPage } from '../about/about.page';
+import { ContactPage } from '../contact/contact.page';
 
 @Component({
-  templateUrl: 'tabs.html',
+  templateUrl: 'tabs.page.html',
 })
 export class TabsPage {
   // this tells the tabs component which Pages

@@ -1,4 +1,4 @@
-import { ContactPage } from './contact';
+import { ContactPage } from './contact.page';
 import { TestBed, inject } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { mockNavController } from 'ionic-angular/util/mock-providers';
