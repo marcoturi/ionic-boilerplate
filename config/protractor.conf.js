@@ -3,12 +3,12 @@ const SSReporter = require('protractor-jasmine2-screenshot-reporter');
 
 const screenshotReporter = new SSReporter ({
     dest: 'coverage/protractor',
-    pathBuilder: function(currentSpec, suites) {
-        var name = currentSpec.fullName;
-        return name.replace(/\s+/g, '-').toLowerCase();
+    cleanDestination: true,
+    pathBuilder: function(currentSpec, suites, browserCapabilities) {
+        return browserCapabilities.get('browserName') + '/' + currentSpec.fullName;
     },
-    filename: 'index.html',
-    reportTitle: 'e2e tests'
+    filename: 'e2e-report.html',
+    reportTitle: 'E2E Tests Report'
 });
 
 exports.config = {
@@ -33,12 +33,6 @@ exports.config = {
     },
     baseUrl: 'http://localhost:8090',
     allScriptsTimeout: 30000,
-    // hook into screenshotReporter's beforeLaunch
-    beforeLaunch: function() {
-        return new Promise(function(resolve){
-            screenshotReporter.beforeLaunch(resolve);
-        });
-    },
     onPrepare: function () {
         var SpecReporter = require('jasmine-spec-reporter');
         // add jasmine spec reporter
@@ -57,8 +51,11 @@ exports.config = {
             disableWarnings: true,
             fast: true
         });
+
+        return new Promise(function(resolve){
+            screenshotReporter.beforeLaunch(resolve);
+        });
     },
-    // hook into screenshotReporter's afterLaunch
     afterLaunch: function(exitCode) {
         return new Promise(function(resolve){
             screenshotReporter.afterLaunch(resolve.bind(this, exitCode));
