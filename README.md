@@ -72,6 +72,7 @@ Note: you should have ruby 2 installed to run scss-lint and python to run e2e te
 | `e2e:interactive` | Runs e2e protractor tests in interactive mode          |
 | `docs`            | Generate code documentation through Typedoc            |
 | `outdated`        | Search npm packages for outdated dependencies          |
+| `post-install`    | Update web-driver for e2e tests.                       |
 | `ios:dev`         | Build .ipa using dev environment vars                  |
 | `ios:release`     | Build .ipa with production environment vars            |
 | `android:dev`     | Build .apk using dev environment vars                  |
