@@ -25,12 +25,8 @@
     "e2e": "protractor",
     "pree2e:interactive": "npm run pree2e",
     "e2e:interactive": "protractor --elementExplorer",
-    "watch": "ionic-app-scripts watch",
-    "serve:before": "watch",
-    "emulate:before": "build",
-    "deploy:before": "build",
-    "build:before": "build",
-    "run:before": "build-dev",
+    "ionic:serve": "ionic-app-scripts serve",
+    "ionic:build": "ionic-app-scripts build",
     "ios:dev": "bnr ios:dev",
     "ios:release": "bnr ios:release",
     "ios:release:ci": "bnr ios:release:ci",
@@ -42,7 +38,8 @@
     "push": "git push --follow-tags origin master",
     "lint": "tslint \"src/**/*.ts\" --exclude=src/**/*.d.ts",
     "scss-lint": "scss-lint",
-    "outdated": "npm outdated --depth 0"
+    "outdated": "npm outdated --depth 0",
+    "post-install": "webdriver-manager update"
   },
   "betterScripts": {
     "dev": {
@@ -132,7 +129,7 @@
     "lodash-es": "^4.16.6"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "0.0.41",
+    "@ionic/app-scripts": "0.0.43",
     "@types/jasmine": "2.5.37",
     "awesome-typescript-loader": "^2.2.1",
     "better-npm-run": "0.0.13",
@@ -154,7 +151,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.8.0",
     "phantomjs-prebuilt": "^2.1.13",
-    "protractor": "^4.0.10",
+    "protractor": "^4.0.11",
     "protractor-jasmine2-screenshot-reporter": "^0.3.2",
     "raw-loader": "0.5.1",
     "source-map-loader": "^0.1.5",
@@ -164,7 +161,7 @@
     "ts-node": "^1.7.0",
     "tslint-loader": "^2.1.3",
     "typedoc": "^0.5.1",
-    "typescript": "^2.0.8",
+    "typescript": "^2.0.9",
     "validate-commit-msg": "^2.8.0",
     "webpack": "2.1.0-beta.25",
     "xml2js": "^0.4.17"
