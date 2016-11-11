@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.11.0...v0.12.0) (2016-11-11)
+
+
+### Bug Fixes
+
+* **protractor:** fix screenshot report showhide bug, close [#16](https://github.com/marcoturi/ionic2-boilerplate/issues/16) ([b1f481f](https://github.com/marcoturi/ionic2-boilerplate/commit/b1f481f))
+* **webpack:** fix warnings noise in tests caused by ionic-native ([4f17e53](https://github.com/marcoturi/ionic2-boilerplate/commit/4f17e53))
+
+
+### Features
+
+* **npm:** add post-install task to npm ([344c79c](https://github.com/marcoturi/ionic2-boilerplate/commit/344c79c))
+* **test:** add ionic mock file ([7a6e1e1](https://github.com/marcoturi/ionic2-boilerplate/commit/7a6e1e1))
+
+
+### Reverts
+
+* **declaration:** revert declare module * ([90001fc](https://github.com/marcoturi/ionic2-boilerplate/commit/90001fc))
+
+
+
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.10.2...v0.11.0) (2016-11-08)
 
