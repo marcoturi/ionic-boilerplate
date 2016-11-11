@@ -18,12 +18,6 @@ All notable changes to this project will be documented in this file. See [standa
 * **test:** add ionic mock file ([7a6e1e1](https://github.com/marcoturi/ionic2-boilerplate/commit/7a6e1e1))
 
 
-### Reverts
-
-* **declaration:** revert declare module * ([90001fc](https://github.com/marcoturi/ionic2-boilerplate/commit/90001fc))
-
-
-
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.10.2...v0.11.0) (2016-11-08)
 
