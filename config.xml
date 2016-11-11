@@ -74,15 +74,16 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
-  <preference name="SplashScreenDelay" value="0"/>
-  <preference name="FadeSplashScreen" value="false"/>
-  <preference name="FadeSplashScreenDuration" value="0"/>
-  <preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF"/>
-  <preference name="SplashScreen" value="screen"/>
+  <!--
+    Change these to configure how the splashscreen displays and fades in/out.
+    More info here: https://github.com/apache/cordova-plugin-splashscreen
+  -->
+  <preference name="SplashMaintainAspectRatio" value="true" />
+  <preference name="FadeSplashScreenDuration" value="300" />
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
-  <engine name="android" spec="5.2.2"/>
+  <engine name="android" spec="6.0.0"/>
   <plugin name="cordova-plugin-device" spec="~1.1.3"/>
   <plugin name="cordova-plugin-console" spec="~1.0.4"/>
   <plugin name="cordova-plugin-whitelist" spec="~1.3.0"/>
