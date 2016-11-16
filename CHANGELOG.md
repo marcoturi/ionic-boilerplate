@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.13.0"></a>
+# [0.13.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.12.0...v0.13.0) (2016-11-16)
+
+
+### Features
+
+* **npm:** add types/node to support type definition of process.env ([ccf1c03](https://github.com/marcoturi/ionic2-boilerplate/commit/ccf1c03))
+
+
+
 <a name="0.12.0"></a>
 # [0.12.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.11.0...v0.12.0) (2016-11-11)
 
