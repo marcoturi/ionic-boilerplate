@@ -3,11 +3,9 @@ const _ = require('lodash');
 
 console.log('Editing watch for ignoring spec and e2e files');
 
-_.forEach(watchConfig.watchers, (watch) =>{
-    if(watch.paths.indexOf('{{SRC}}/**/*.ts') > -1) {
-        watch.options = {
-            ignored: /(.*(?=\.spec|\.e2e).*?\.ts)/
-        };
+_.forEach(watchConfig.watchers, (watch) => {
+    if (watch.paths.indexOf('{{SRC}}/**/*.(ts|html|scss)') > -1) {
+        watch.options.ignored.push('**/*.e2e.ts');
     }
 });
 
