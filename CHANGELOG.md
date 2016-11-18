@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.14.1"></a>
+## [0.14.1](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.14.0...v0.14.1) (2016-11-18)
+
+
+
 <a name="0.14.0"></a>
 # [0.14.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.13.0...v0.14.0) (2016-11-18)
 
