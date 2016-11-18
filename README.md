@@ -24,7 +24,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 - [Es-Lodash](#optional-libraries) to reduce final bundle size.
 - [NVM](https://github.com/creationix/nvm) to manage multiple active node.js versions
 - [Yarn](https://github.com/yarnpkg/yarn) for fast, reliable, and secure dependency management.
-- [BetterScripts](https://github.com/benoror/better-npm-run) for better NPM scripts runner.
+- [BetterScripts](https://github.com/benoror/better-npm-run) for better NPM scripts.
 - ENV variables from package.json injected automatically.
 - Documentation with [Typedoc](https://github.com/TypeStrong/typedoc/).
 - Continuous Integration with Gitlab CI [see here for info](#gitlab-ci).
