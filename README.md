@@ -20,7 +20,7 @@ NOTE: I moved Unit tests from running through rollup to webpack with release 0.1
 - [License](#license)
 
 ## <a name="features"></a>Features
-- Ionic RC2
+- Ionic RC3
 - [Es-Lodash](#optional-libraries)
 - [NVM](https://github.com/creationix/nvm)
 - [BetterScripts](https://github.com/benoror/better-npm-run) for npm 

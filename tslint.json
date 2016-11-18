@@ -23,7 +23,7 @@
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-consecutive-blank-lines": true,
-    "no-console": [true, "info", "time", "timeEnd", "trace"],
+    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
@@ -56,7 +56,6 @@
       {"call-signature": "nospace", "index-signature": "nospace", "parameter": "nospace", "property-declaration": "nospace", "variable-declaration": "nospace"},
       {"call-signature": "space", "index-signature": "space", "parameter": "space", "property-declaration": "space", "variable-declaration": "space"}],
     "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
-    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"
-    ]
+    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"]
   }
 }
