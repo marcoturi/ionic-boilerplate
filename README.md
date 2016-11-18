@@ -2,12 +2,12 @@
  [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) ![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg) [![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master) [![Join the chat at https://gitter.im/marcoturi/ionic2-boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marcoturi/ionic2-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
-NOTE: I moved Unit tests from running through rollup to webpack with release 0.10.0. If you are looking to the old configuration see the [rollup](https://github.com/marcoturi/ionic2-boilerplate/tree/rollup) branch.
+NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.10.0. If you are looking to the old configuration see the [rollup](https://github.com/marcoturi/ionic2-boilerplate/tree/rollup) branch.
 ## Table of Contents
 - [Features](#features)
 - [Roadmap](#roadmap)
 - [Installation & Configuration](#installation)
-    - [Pre-Install Commands](#pre-install)
+    - [Quick Start](#quick-start)
     - [NPM scripts commands](#npm-scripts)
     - [Gitlab CI Configuration](#gitlab-ci)
 - [Tips](#tips)
@@ -21,41 +21,57 @@ NOTE: I moved Unit tests from running through rollup to webpack with release 0.1
 
 ## <a name="features"></a>Features
 - Ionic RC3
-- [Es-Lodash](#optional-libraries)
-- [NVM](https://github.com/creationix/nvm)
-- [BetterScripts](https://github.com/benoror/better-npm-run) for npm 
-- ENV variables from package.json injected automatically
-- Documentation with [Typedoc](https://github.com/TypeStrong/typedoc/)
-- Continuous Integration with Gitlab CI [see here for info](#gitlab-ci)
-    - Automatic apk only when pushing to release branch
-    - Automatic ipa through ionic package only when pushing to release branch
-    - [Docker image](https://github.com/marcoturi/ionic-docker)
+- [Es-Lodash](#optional-libraries) to reduce final bundle size.
+- [NVM](https://github.com/creationix/nvm) to manage multiple active node.js versions
+- [Yarn](https://github.com/yarnpkg/yarn) for fast, reliable, and secure dependency management.
+- [BetterScripts](https://github.com/benoror/better-npm-run) for better NPM scripts runner.
+- ENV variables from package.json injected automatically.
+- Documentation with [Typedoc](https://github.com/TypeStrong/typedoc/).
+- Continuous Integration with Gitlab CI [see here for info](#gitlab-ci).
+    - Automatic apk only when pushing to release branch.
+    - Automatic ipa through ionic package only when pushing to release branch.
+    - A [Docker image](https://github.com/marcoturi/ionic-docker).
 - Tests
-    - Unit tests with karma
-    - E2E tests with protractor 
-    - Screenshot reporter for protractor
-    - Coverage with istanbul
+    - Unit tests with Karma.
+    - E2E tests with Protractor.
+    - Screenshot reporter for Protractor.
+    - Code coverage with Istanbul.
     - Gitlab badge [see here for info](#gitlab-ci)
 - Linting
-    - [SCSS Lint](https://github.com/HugoGiraudel/sass-boilerplate)
-    - TSlint with [Codelyzer](https://github.com/mgechev/codelyzer)
+    - [SCSS Lint](https://github.com/HugoGiraudel/sass-boilerplate) following Sass Guidelines.
+    - TSlint with [Codelyzer](https://github.com/mgechev/codelyzer).
 - GIT 
-    - Workflow with [Commitizen](https://github.com/commitizen/cz-cli) 
-    - Automatic changelog
-    - Automatic alignment of app version in config.xml from package.json through cordova hook
+    - Workflow with [Commitizen](https://github.com/commitizen/cz-cli).
+    - Automatic changelog.
+    - Automatic alignment of app version in config.xml from package.json through cordova hook.
 
 ## <a name="roadmap"></a>Roadmap
-- Automatic download .ipa in gitlab artificts
+- Automatic download .ipa in gitlab artificts.
 
 ## <a name="installation"></a>Installation & Configuration
-### <a name="pre-install"></a>Pre-Install Commands
-```
-npm i -g cordova ionic
+### <a name="quick-start"></a>Quick Start
+```bash
+# Required dependecies (on Mac Os also install ios-sim and ios-deploy)
+npm i -g cordova ionic yarn
 gem install scss_lint
-npm i
-./node_modules/.bin/webdriver-manager update
+
+# Clone the repo
+# --depth 1 removes all but one .git commit history
+git clone --depth 1 https://github.com/marcoturi/ionic2-boilerplate.git
+
+# Change directory
+cd ionic2-boilerplate
+
+# Install project dependencies (if you prefer you can use yarn here)
+npm install
+npm run post-install
+
+# Launch ionic serve
+npm run dev
 ```
-Note: you should have ruby 2 installed to run scss-lint and python to run e2e tests.
+**TO RUN IONIC: Make sure you have Node version >= 6.0 and NPM >= 3** <br>
+**TO RUN SCSS-LINT: Make sure you have Ruby >= 2.0** <br>
+**TO RUN PROTRACTOR/E2E TESTS: Make sure you have Python = 2.0**
 
 ### <a name="npm-scripts"></a>NPM scripts commands
 | Task              | Description                                            |
@@ -72,7 +88,7 @@ Note: you should have ruby 2 installed to run scss-lint and python to run e2e te
 | `e2e:interactive` | Runs e2e protractor tests in interactive mode          |
 | `docs`            | Generate code documentation through Typedoc            |
 | `outdated`        | Search npm packages for outdated dependencies          |
-| `post-install`    | Update web-driver for e2e tests.                       |
+| `post-install`    | Update web-driver to be able to run e2e tests.         |
 | `ios:dev`         | Build .ipa using dev environment vars                  |
 | `ios:release`     | Build .ipa with production environment vars            |
 | `android:dev`     | Build .apk using dev environment vars                  |
