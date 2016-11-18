@@ -69,9 +69,9 @@ npm run post-install
 # Launch ionic serve
 npm run dev
 ```
-**TO RUN IONIC: Make sure you have Node version >= 6.0 and NPM >= 3** <br>
-**TO RUN SCSS-LINT: Make sure you have Ruby >= 2.0** <br>
-**TO RUN PROTRACTOR/E2E TESTS: Make sure you have Python = 2.0**
+**TO RUN IONIC: Make sure you have Node version >= 6.X and NPM >= 3** <br>
+**TO RUN SCSS-LINT: Make sure you have Ruby >= 2** <br>
+**TO RUN PROTRACTOR/E2E TESTS: Make sure you have Python = 2.X**
 
 ### <a name="npm-scripts"></a>NPM scripts commands
 | Task              | Description                                            |
