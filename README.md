@@ -21,7 +21,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 
 ## <a name="features"></a>Features
 - Ionic RC3
-- [Es-Lodash](#optional-libraries) to reduce final bundle size.
+- [Es-Lodash](#optional-libraries) instead of Lodash to reduce final bundle size.
 - [NVM](https://github.com/creationix/nvm) to manage multiple active node.js versions
 - [Yarn](https://github.com/yarnpkg/yarn) for fast, reliable, and secure dependency management.
 - [BetterScripts](https://github.com/benoror/better-npm-run) for better NPM scripts.
@@ -55,15 +55,14 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 npm i -g cordova ionic yarn
 gem install scss_lint
 
-# Clone the repo
-# --depth 1 removes all but one .git commit history
+# Clone the repo --depth 1 removes all but one .git commit history
 git clone --depth 1 https://github.com/marcoturi/ionic2-boilerplate.git
 
 # Change directory
 cd ionic2-boilerplate
 
-# Install project dependencies (if you prefer you can use yarn here)
-npm install
+# Install project dependencies
+yarn
 npm run post-install
 
 # Launch ionic serve
