@@ -2453,9 +2453,9 @@ ionic-angular@2.0.0-rc.3:
   version "2.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/ionic-angular/-/ionic-angular-2.0.0-rc.3.tgz#69877173293ae2a585f139aad1cdb72fca2a3d9e"
 
-ionic-native@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/ionic-native/-/ionic-native-2.2.6.tgz#cfd8f8bc6ab4d38eb9c52c079644d25fd5e7baa0"
+ionic-native@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/ionic-native/-/ionic-native-2.2.7.tgz#a994f3cd34cb71c618497c2142dbf394603cff46"
   dependencies:
     rxjs "^5.0.0-beta.6"
 
