@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.15.0"></a>
+# [0.15.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.14.1...v0.15.0) (2016-11-28)
+
+
+### Bug Fixes
+
+* **yarn:** fix config command in the CI ([6a2ecb4](https://github.com/marcoturi/ionic2-boilerplate/commit/6a2ecb4))
+
+
+### Features
+
+* **ci:** using yarn for CI instead of npm ([6e61c59](https://github.com/marcoturi/ionic2-boilerplate/commit/6e61c59))
+* **dependencies:** add yarnclean ([3911045](https://github.com/marcoturi/ionic2-boilerplate/commit/3911045))
+* **dependencies:** adding yarn support, close [#14](https://github.com/marcoturi/ionic2-boilerplate/issues/14) ([efe2f55](https://github.com/marcoturi/ionic2-boilerplate/commit/efe2f55))
+* **types:** add lodash-es type ([c7df21d](https://github.com/marcoturi/ionic2-boilerplate/commit/c7df21d))
+
+
+
 <a name="0.14.1"></a>
 ## [0.14.1](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.14.0...v0.14.1) (2016-11-18)
 
