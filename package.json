@@ -133,6 +133,7 @@
   "devDependencies": {
     "@ionic/app-scripts": "0.0.46",
     "@types/jasmine": "2.5.38",
+    "@types/lodash-es": "^4.14.0",
     "@types/node": "^6.0.49",
     "awesome-typescript-loader": "^2.2.1",
     "better-npm-run": "0.0.13",

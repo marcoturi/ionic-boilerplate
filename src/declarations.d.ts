@@ -34,6 +34,4 @@
  *
  */
 
-declare module 'lodash-es/*'
-declare module 'lodash-es'
 declare module '*.json'
