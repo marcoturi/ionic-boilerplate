@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.15.1"></a>
+## [0.15.1](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.15.0...v0.15.1) (2016-12-13)
+
+
+### Bug Fixes
+
+* **config:** fix errors with new app_scripts 0.0.47, and update dep ([813bc70](https://github.com/marcoturi/ionic2-boilerplate/commit/813bc70))
+
+
+
 <a name="0.15.0"></a>
 # [0.15.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.14.1...v0.15.0) (2016-11-28)
 
