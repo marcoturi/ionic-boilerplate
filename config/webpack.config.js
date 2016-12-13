@@ -8,9 +8,9 @@ const webpack = require('webpack');
 
 console.log('Editing webpack configuration to inject env');
 
-const nodeEnv = JSON.stringify(process.env.NODE_ENV) || 'development';
+const nodeEnv = JSON.stringify(process.env.NODE_ENV) || JSON.stringify('development');
 const apiUrl = JSON.stringify(process.env.API_URL) || JSON.stringify('');
-const platform = JSON.stringify(process.env.PLATFORM) || 'android';
+const platform = JSON.stringify(process.env.PLATFORM) || JSON.stringify('android');
 
 /**
  * Plugin: DefinePlugin

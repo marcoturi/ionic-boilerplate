@@ -52,7 +52,7 @@
       }
     },
     "build": {
-      "command": "ionic-app-scripts build",
+      "command": "ionic-app-scripts build --prod",
       "env": {
         "NODE_ENV": "production"
       }
@@ -84,7 +84,7 @@
       }
     },
     "ios:release": {
-      "command": "ionic build ios",
+      "command": "ionic build ios --prod",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "ios"
@@ -105,7 +105,7 @@
       }
     },
     "android:release": {
-      "command": "ionic build android",
+      "command": "ionic build android --prod",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "android"
@@ -122,16 +122,17 @@
     "@angular/platform-browser": "2.1.1",
     "@angular/platform-browser-dynamic": "2.1.1",
     "@angular/platform-server": "2.1.1",
+    "@angular/tsc-wrapped": "^0.4.2",
     "@ionic/storage": "1.1.6",
     "ionic-angular": "2.0.0-rc.3",
-    "ionic-native": "^2.2.7",
+    "ionic-native": "^2.2.11",
     "ionicons": "3.0.0",
     "lodash-es": "^4.17.2",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "0.6.26"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "0.0.46",
+    "@ionic/app-scripts": "0.0.47",
     "@types/jasmine": "2.5.38",
     "@types/lodash-es": "^4.14.0",
     "@types/node": "^6.0.49",
@@ -139,7 +140,7 @@
     "better-npm-run": "0.0.13",
     "codelyzer": "1.0.0-beta.3",
     "commitizen": "^2.8.6",
-    "css-loader": "^0.26.0",
+    "css-loader": "^0.26.1",
     "cz-conventional-changelog": "^1.2.0",
     "ghooks": "^1.3.2",
     "istanbul-instrumenter-loader": "0.2.0",
@@ -149,21 +150,21 @@
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
+    "karma-jasmine": "^1.1.0",
     "karma-mocha-reporter": "^2.2.1",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-remap-coverage": "^0.1.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.8.0",
-    "phantomjs-prebuilt": "^2.1.13",
-    "protractor": "^4.0.11",
+    "phantomjs-prebuilt": "^2.1.14",
+    "protractor": "^4.0.13",
     "protractor-jasmine2-screenshot-reporter": "^0.3.2",
     "raw-loader": "0.5.1",
     "source-map-loader": "^0.1.5",
-    "standard-version": "^3.0.0",
+    "standard-version": "^4.0.0",
     "to-string-loader": "^1.1.4",
     "ts-helpers": "^1.1.1",
-    "ts-node": "^1.7.0",
+    "ts-node": "^1.7.2",
     "tslint": "^3.15.1",
     "tslint-loader": "^2.1.3",
     "typedoc": "^0.5.1",
