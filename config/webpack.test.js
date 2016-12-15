@@ -127,17 +127,21 @@ module.exports = (options) => {
                  */
                 {
                     test: /\.ts$/,
-                    loader: 'awesome-typescript-loader',
-                    query: {
-                        // use inline sourcemaps for "karma-remap-coverage" reporter
-                        sourceMap: !coverageEnabled,
-                        inlineSourceMap: coverageEnabled,
-                        module: 'commonjs',
-                        noEmitHelpers: true,
-                        compilerOptions: {
-                            removeComments: true
-                        }
-                    },
+
+                    loaders: [
+                        `awesome-typescript-loader?sourceMap=${!coverageEnabled},inlineSourceMap=${coverageEnabled},module=commonjs,noEmitHelpers=true,compilerOptions{}=removeComments:true`,
+                        'angular2-template-loader'
+                    ],
+                    // query: {
+                    //     // use inline sourcemaps for "karma-remap-coverage" reporter
+                    //     sourceMap: !coverageEnabled,
+                    //     inlineSourceMap: coverageEnabled,
+                    //     module: 'commonjs',
+                    //     noEmitHelpers: true,
+                    //     compilerOptions: {
+                    //         removeComments: true
+                    //     }
+                    // },
                     exclude: [/\.e2e\.ts$/]
                 },
 
