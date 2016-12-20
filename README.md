@@ -14,7 +14,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
     - [Optional Libraries](#optional-libraries)
     - [Git Workflow](#git-workflow)
     - [Useful Links](#links)
-    - [Ionic & Cordova](#ionic-cordova)asdfas
+    - [Ionic & Cordova](#ionic-cordova)
     - [Webstorm](#webstorm)
     - [Windows](#windows)
 - [License](#license)
