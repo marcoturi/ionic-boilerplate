@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.17.0"></a>
+# [0.17.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.16.0...v0.17.0) (2016-12-20)
+
+
+### Bug Fixes
+
+* **npm:** stick karma-remap-coverage to 0.12, close [#20](https://github.com/marcoturi/ionic2-boilerplate/issues/20) ([2251eec](https://github.com/marcoturi/ionic2-boilerplate/commit/2251eec))
+
+
+### Features
+
+* **npm:** update to ionic app scripts ([7e26c68](https://github.com/marcoturi/ionic2-boilerplate/commit/7e26c68))
+
+
+
 <a name="0.16.0"></a>
 # [0.16.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.15.1...v0.16.0) (2016-12-16)
 
