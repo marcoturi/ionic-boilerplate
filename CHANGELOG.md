@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.18.0"></a>
+# [0.18.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.17.0...v0.18.0) (2017-01-11)
+
+
+### Bug Fixes
+
+* **test:** add options in karma.conf and webpack.test to enanche the console log outputs during unit ([9b6c64a](https://github.com/marcoturi/ionic2-boilerplate/commit/9b6c64a))
+
+
+### Features
+
+* **git:** remove ghooks in favor of husky ([cf4337d](https://github.com/marcoturi/ionic2-boilerplate/commit/cf4337d))
+* **npm:** update ionic and other dips ([5bfddec](https://github.com/marcoturi/ionic2-boilerplate/commit/5bfddec))
+
+
+
 <a name="0.17.0"></a>
 # [0.17.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.16.0...v0.17.0) (2016-12-20)
 
