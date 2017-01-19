@@ -8,6 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": false,
     "sourceMap": true,
+    "noUnusedParameters": true,
     "lib": [
       "dom",
       "es2015"

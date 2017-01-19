@@ -20,8 +20,8 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 - [License](#license)
 
 ## <a name="features"></a>Features
-- Ionic RC3
-- [Es-Lodash](#optional-libraries) to reduce final bundle size.
+- Ionic RC4
+- [Es-Lodash](#optional-libraries) instead of Lodash to reduce final bundle size.
 - [NVM](https://github.com/creationix/nvm) to manage multiple active node.js versions
 - [Yarn](https://github.com/yarnpkg/yarn) for fast, reliable, and secure dependency management.
 - [BetterScripts](https://github.com/benoror/better-npm-run) for better NPM scripts.
@@ -55,15 +55,14 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 npm i -g cordova ionic yarn
 gem install scss_lint
 
-# Clone the repo
-# --depth 1 removes all but one .git commit history
+# Clone the repo --depth 1 removes all but one .git commit history
 git clone --depth 1 https://github.com/marcoturi/ionic2-boilerplate.git
 
 # Change directory
 cd ionic2-boilerplate
 
-# Install project dependencies (if you prefer you can use yarn here)
-npm install
+# Install project dependencies
+yarn
 npm run post-install
 
 # Launch ionic serve
@@ -107,7 +106,7 @@ npm run dev
 
 ## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
-If you want everything to just work nicely, use es2015 libraries like lodash-es instead of lodash (NOTE: [actually there are no typings available] (https://github.com/DefinitelyTyped/DefinitelyTyped/issues/7691), for this reason I used a wildcard in declarations.d.ts for lodash-es). Also in the case of lodash try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](https://github.com/rollup/rollup/wiki/Troubleshooting) for further info. To find examples on how to import 3rd party libs with ionic and rollup see [here](https://github.com/danbucholtz/ionic-third-party-lib-mega-test) and [here](http://ionicframework.com/docs/v2/resources/third-party-libs/)
+If you want everything to just work nicely with rollup, use es2015 libraries like lodash-es instead of lodash. In the case of lodash-es try to do: `import map from 'lodash-es/map'` rather than `import { map } from 'lodash-es'`. See [here](https://github.com/rollup/rollup/wiki/Troubleshooting) for further info. To find examples on how to import 3rd party libs with ionic and rollup see [here](https://github.com/danbucholtz/ionic-third-party-lib-mega-test) and [here](http://ionicframework.com/docs/v2/resources/third-party-libs/)
 - Error logging: [Sentry](https://docs.sentry.io/clients/javascript/integrations/angular2/)
 - Database: [PouchDB](https://pouchdb.com/) or [Ionic-storage](https://github.com/driftyco/ionic-storage). Don't use localstorage as it can be deleted by OS to free memory.
 - Time and Dates: [MomentJs](http://momentjs.com/)

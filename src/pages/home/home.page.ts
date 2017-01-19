@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import filter from 'lodash-es/filter';
 
 @Component({
-    selector: 'page-home',
+    selector: 'ib-page-home',
     templateUrl: 'home.page.html',
 })
 export class HomePage {
