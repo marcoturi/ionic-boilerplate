@@ -3,9 +3,3 @@ machine:
         version: 6.1.0
     environment:
         PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
-
-dependencies:
-    cache_directories:
-        - ~/.cache/yarn
-    override:
-        - yarn
