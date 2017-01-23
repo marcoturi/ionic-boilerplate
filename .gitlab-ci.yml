@@ -2,18 +2,12 @@ image: marcoturi/ionic:latest
 
 stages:
   - test
-  - deploy
 
 before_script:
-  - yarn config set cache-folder yarn-cache
-  - yarn
+  - npm install
   - gem install scss_lint
   - export DISPLAY=:99
   - npm run post-install
-
-cache:
-  paths:
-    - yarn-cache/
 
 build_web:
   stage: test
@@ -26,25 +20,3 @@ build_web:
     - npm run test
     - npm run build
     - npm run e2e
-
-build_ios:
-  stage: deploy
-  only:
-    - release
-  script:
-    - ./sh/ionic-login.sh
-    - ls
-    - npm run ios:release:ci
-    - ./sh/ionic-package-ios.sh
-
-build_android:
-  stage: deploy
-  only:
-    - release
-  script:
-    - ls
-    - npm run android:release
-    - ls ./platforms/android/build/outputs/apk/android*.apk
-  artifacts:
-    paths:
-      - platforms/android/build/outputs/apk/
