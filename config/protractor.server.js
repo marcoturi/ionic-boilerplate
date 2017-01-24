@@ -2,8 +2,7 @@
 
 startWebServer('127.0.0.1', 'www', startTest);
 
-function startWebServer(host, root, cb)
-{
+function startWebServer(host, root, cb) {
     // Serve up public/ftp folder
     const serve = require('serve-static')(root);
 
@@ -15,8 +14,7 @@ function startWebServer(host, root, cb)
     // Listen
     server.listen(0, host);
     server.on(
-        'listening', () =>
-        {
+        'listening', () => {
             const port = server.address().port;
             console.log(`Started web server on ${host}:${port}`);
             process.on('exit', () => server.close());
@@ -25,8 +23,7 @@ function startWebServer(host, root, cb)
     );
 }
 
-function startTest(url)
-{
+function startTest(url) {
     const argv = ['--baseUrl', url]         // use the correct URL
         .concat(process.argv.slice(2));     // forward args to protractor
 

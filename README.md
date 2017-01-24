@@ -70,7 +70,6 @@ npm run dev
 ```
 **TO RUN IONIC: Make sure you have Node version >= 6.X and NPM >= 3** <br>
 **TO RUN SCSS-LINT: Make sure you have Ruby >= 2** <br>
-**TO RUN PROTRACTOR/E2E TESTS: Make sure you have Python = 2.X**
 
 ### <a name="npm-scripts"></a>NPM scripts commands
 | Task              | Description                                            |
@@ -138,7 +137,7 @@ npm run push // this will run unit tests + push to master
 - Set code style for typesript:
     - {import} -> { import }
     - import * from "lodash" -> import * from 'lodash'
-- Set typescript settings to be used with the version inside node_modules instead of the bundled one (1.8)
+- Set typescript settings to be used with the version inside node_modules instead of the bundled one
 - [Don't activate typescript compiler.](https://github.com/driftyco/ionic/issues/8303)
 - Enable tslint in settings
 - Download scss lint plugin and enable it
@@ -151,7 +150,6 @@ npm run push // this will run unit tests + push to master
 - npm install --global --production windows-build-tools //node-gyp fix
 - Set webstorm to write with line endingds LF (mac os or unix)
 - To avoid git warnings: git config core.autocrlf false
-- e2e commands is not working on windows, because the python server can't be launched. As a workaround add START /B before python -m and remove & at the end of the line in package.json. Anyway you will have to kill manually the process every time after every execution.
 
 ## <a name="license"></a>License
     Copyright (c) 2016 Marco Turi
