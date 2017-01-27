@@ -20,7 +20,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 - [License](#license)
 
 ## <a name="features"></a>Features
-- Ionic RC4
+- Ionic 2
 - [Es-Lodash](#optional-libraries) instead of Lodash to reduce final bundle size.
 - [NVM](https://github.com/creationix/nvm) to manage multiple active node.js versions
 - [Yarn](https://github.com/yarnpkg/yarn) for fast, reliable, and secure dependency management.

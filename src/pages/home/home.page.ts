@@ -7,7 +7,7 @@ import filter from 'lodash-es/filter';
     templateUrl: 'home.page.html',
 })
 export class HomePage {
-    public user;
+    public user: any;
 
     constructor(public navCtrl: NavController) {
         const myArr = [

@@ -1,7 +1,7 @@
 import { browser, by, element } from 'protractor';
 
 class HomeObj {
-    public title;
+    public title: any;
     constructor() {
         this.title = element(by.id('title'));
     }

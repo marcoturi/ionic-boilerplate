@@ -1,5 +1,10 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: '../assets/fonts';
+
 @import 'ionic.globals';
 
 
@@ -20,7 +25,7 @@ $background-color:  #fff;
 // It's highly recommended to change the default colors
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
+// The 'primary' color is the only required color in the map.
 
 $colors: (
   primary:    #387ef5,
@@ -47,5 +52,13 @@ $colors: (
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
-$ionicons-font-path: '../assets/fonts';
-@import 'ionicons';
+@import 'ionic.ionicons';
+
+
+// Fonts
+// --------------------------------------------------
+// Roboto font is used by default for Material Design. Noto sans
+// is used by default for Windows.
+
+@import 'roboto';
+@import 'noto-sans';
