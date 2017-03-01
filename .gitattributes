@@ -1,0 +1,45 @@
+###################################################
+# normalize line endings
+###################################################
+
+# config files
+.*      eol=lf
+*.conf  eol=lf
+*.yaml  eol=lf
+*.yml   eol=lf
+
+# sources files
+*.css   eol=lf
+*.htm   eol=lf
+*.html  eol=lf
+*.js    eol=lf
+*.less  eol=lf
+*.php   eol=lf
+*.sass  eol=lf
+*.scss  eol=lf
+*.sh    eol=lf
+*.ts    eol=lf
+*.xml   eol=lf
+
+# text files
+*.md    eol=lf
+*.txt   eol=lf
+
+# data files
+*.json  eol=lf
+*.map   eol=lf
+
+# windows files
+*.bat   eol=crlf
+*.cmd   eol=crlf
+*.vbs   eof=crlf
+
+
+###################################################
+# Ignore files on publish
+###################################################
+/.*             export-ignore
+/build          export-ignore
+/dev            export-ignore
+/docs           export-ignore
+/tests          export-ignore
