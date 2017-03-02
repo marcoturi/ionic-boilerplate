@@ -106,15 +106,24 @@ npm run dev
 
 ### <a name="dependencies"></a>Dependencies
 
-##### TypeScript 2.2.1
+##### TypeScript
+
+##### 2.2.1
 
 `codelyzer@2.0.0-beta.2` or above is required.
+`tslint@4.5.0` or above is required.
 
+##### Codelyzser
 
-##### Codelyzser 2.0.0
+###### 2.0.0-beta.2 or above
 
-It has a peer dependency on `@angular/compiler@^2.3.1 || >=4.0.0-beta <5.0.0` & `@angular/core@^2.3.1 || >=4.0.0-beta <5.0.0`.
+Starting from `2.0.0-beta.2`, it has a peer dependency on `@angular/compiler@^2.3.1 || >=4.0.0-beta <5.0.0` & `@angular/core@^2.3.1 || >=4.0.0-beta <5.0.0`.
 But Ioinic 2 pins Angular to 2.2.1, which fails the check. However, it seems to work without problem.
+
+###### 3.x
+
+Not tested
+
 
 
 ## <a name="tips"></a>Tips
