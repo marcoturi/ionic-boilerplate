@@ -48,6 +48,7 @@ module.exports = (config) => {
         browsers: [
             'PhantomJS'
         ],
+        browserNoActivityTimeout: 30000,
         singleRun: true
     };
 

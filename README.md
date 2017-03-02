@@ -10,6 +10,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
     - [Quick Start](#quick-start)
     - [NPM scripts commands](#npm-scripts)
     - [Gitlab CI Configuration](#gitlab-ci)
+    - [Dependencies](#dependencies)
 - [Tips](#tips)
     - [Optional Libraries](#optional-libraries)
     - [Git Workflow](#git-workflow)
@@ -102,6 +103,28 @@ npm run dev
 | `IONIC_LOGIN_PASSWORD`         | Your ionic.io password                                                                                           |
 | `IONIC_PACKAGE_BUILD_RELEASE`  | (Optional) Indicate whether this is a release build. Possible values are `true` or `false`. Defaults to `false`. |
 | `IONIC_PACKAGE_BUILD_PROFILE`  | Security profile to use for the build, as defined in Ionic.io console.                                           |
+
+### <a name="dependencies"></a>Dependencies
+
+##### TypeScript
+
+##### 2.2.1
+
+`codelyzer@2.0.0-beta.2` or above is required.
+`tslint@4.5.0` or above is required.
+
+##### Codelyzser
+
+###### 2.0.0-beta.2 or above
+
+Starting from `2.0.0-beta.2`, it has a peer dependency on `@angular/compiler@^2.3.1 || >=4.0.0-beta <5.0.0` & `@angular/core@^2.3.1 || >=4.0.0-beta <5.0.0`.
+But Ioinic 2 pins Angular to 2.2.1, which fails the check. However, it seems to work without problem.
+
+###### 3.x
+
+Not tested
+
+
 
 ## <a name="tips"></a>Tips
 ### <a name="optional-libraries"></a>Optional Libraries
