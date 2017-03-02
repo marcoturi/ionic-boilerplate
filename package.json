@@ -172,7 +172,7 @@
     "tslint": "4.0.0",
     "tslint-loader": "^3.4.2",
     "typedoc": "^0.5.7",
-    "typescript": "~2.0.10",
+    "typescript": "2.2.1",
     "validate-commit-msg": "^2.11.1",
     "webpack": "2.2.1",
     "xml2js": "^0.4.17"
