@@ -161,7 +161,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "2.0.2",
     "phantomjs-prebuilt": "^2.1.14",
-    "protractor": "^5.1.1",
+    "protractor": "4.0.14",
     "protractor-jasmine2-screenshot-reporter": "^0.3.3",
     "raw-loader": "0.5.1",
     "serve-static": "^1.12.1",
