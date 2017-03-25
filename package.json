@@ -135,7 +135,7 @@
     "zone.js": "0.7.2"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "1.2.0",
+    "@ionic/app-scripts": "1.1.4",
     "@types/jasmine": "ts2.0",
     "@types/lodash-es": "ts2.0",
     "angular2-template-loader": "^0.6.2",
