@@ -1,5 +1,3 @@
-// IONIC MOCKS:
-
 export class NavMock {
 
     public pop(): any {
@@ -24,21 +22,5 @@ export class NavMock {
 
     public setRoot(): any {
         return true;
-    }
-}
-
-export class PlatformMock {
-    public ready(): any {
-        return new Promise((resolve: Function) => {
-            resolve();
-        });
-    }
-}
-
-export class MenuMock {
-    public close(): any {
-        return new Promise((resolve: Function) => {
-            resolve();
-        });
     }
 }

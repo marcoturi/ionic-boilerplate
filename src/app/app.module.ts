@@ -5,6 +5,7 @@ import { AboutPage } from '../pages/about/about.page';
 import { ContactPage } from '../pages/contact/contact.page';
 import { HomePage } from '../pages/home/home.page';
 import { TabsPage } from '../pages/tabs/tabs.page';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { TabsPage } from '../pages/tabs/tabs.page';
         HomePage,
         TabsPage,
     ],
-    providers: [],
+    providers: [SplashScreen],
 })
-export class AppModule {}
+export class AppModule {
+}

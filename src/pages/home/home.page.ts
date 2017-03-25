@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import filter from 'lodash-es/filter';
 
 @Component({
@@ -9,7 +8,7 @@ import filter from 'lodash-es/filter';
 export class HomePage {
     public user: any;
 
-    constructor(public navCtrl: NavController) {
+    constructor() {
         const myArr = [
             {
                 name: 'barney',
