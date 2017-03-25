@@ -115,8 +115,7 @@ module.exports = (options) => {
                         // these packages have problems with their sourcemaps
                         helpers.root('node_modules/rxjs'),
                         helpers.root('node_modules/@angular'),
-                        helpers.root('node_modules/ionic-angular'),
-                        helpers.root('node_modules/ionic-native')
+                        helpers.root('node_modules/ionic-angular')
                     ]
                 },
 
