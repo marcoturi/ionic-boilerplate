@@ -1,32 +1,33 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "declaration": false,
-    "sourceMap": true,
-    "noUnusedParameters": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ]
-  },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "compileOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  },
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true
-  }
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "noUnusedParameters": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ]
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    },
+    "awesomeTypescriptLoaderOptions": {
+        "forkChecker": true,
+        "useWebpackText": true
+    }
 }

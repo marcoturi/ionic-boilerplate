@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about.page';
@@ -16,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         TabsPage,
     ],
     imports: [
+        BrowserModule,
         IonicModule.forRoot(MyApp),
     ],
     bootstrap: [IonicApp],

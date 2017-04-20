@@ -1,6 +1,6 @@
-# IONIC 2 Boilerplate
+# IONIC Boilerplate
  [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/marcoturi/ionic2-boilerplate.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate) [![devDependencies Status](https://david-dm.org/marcoturi/ionic2-boilerplate/dev-status.svg)](https://david-dm.org/marcoturi/ionic2-boilerplate?type=dev) ![build status](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/build.svg) [![coverage report](https://gitlab.com/marco_turi/ionic2-boilerplate/badges/master/coverage.svg)](https://gitlab.com/marco_turi/ionic2-boilerplate/commits/master) [![Join the chat at https://gitter.im/marcoturi/ionic2-boilerplate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marcoturi/ionic2-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-<br>A ionic 2 boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
+<br>A ionic boilerplate for starting new projects. This boilerplate will follow the best practices for angular and ionic development.
 
 NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.10.0. If you are looking to the old configuration see the [rollup](https://github.com/marcoturi/ionic2-boilerplate/tree/rollup) branch.
 ## Table of Contents
@@ -20,7 +20,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
 - [License](#license)
 
 ## <a name="features"></a>Features
-- Ionic 2
+- Ionic 3
 - [Es-Lodash](#optional-libraries) instead of Lodash to reduce final bundle size.
 - [NVM](https://github.com/creationix/nvm) to manage multiple active node.js versions
 - [Yarn](https://github.com/yarnpkg/yarn) for fast, reliable, and secure dependency management.

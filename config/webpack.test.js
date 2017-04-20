@@ -216,9 +216,15 @@ module.exports = (options) => {
              * See: https://github.com/angular/angular/issues/11580
              */
             new ContextReplacementPlugin(
-                // The (\\|\/) piece accounts for path separators in *nix and Windows
-                /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-                helpers.root('src') // location of your src
+                /angular(\\|\/)core(\\|\/)@angular/,
+                path.resolve('./src'),
+                {}
+            ),
+
+            new ContextReplacementPlugin(
+                /ionic-angular/,
+                path.resolve('./src'),
+                {}
             ),
 
             /**
