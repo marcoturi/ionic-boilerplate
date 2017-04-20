@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.24.0"></a>
+# [0.24.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.22.0...v0.24.0) (2017-04-20)
+
+
+### Bug Fixes
+
+* **npm:** downgrade protractor version due to problems during npm run build ([fc33825](https://github.com/marcoturi/ionic2-boilerplate/commit/fc33825))
+* **npm:** revert ionic-app-scripts for CI build issue ([1bfdcf3](https://github.com/marcoturi/ionic2-boilerplate/commit/1bfdcf3))
+
+
+### Features
+
+* **app:** update to ionic 3 ([7e22b6b](https://github.com/marcoturi/ionic2-boilerplate/commit/7e22b6b))
+
+
+
 <a name="0.23.0"></a>
 # [0.23.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.21.0...v0.23.0) (2017-03-25)
 
