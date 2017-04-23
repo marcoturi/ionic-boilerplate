@@ -134,7 +134,7 @@ npm run push // this will run unit tests + push to master
 - Avoid the use of ionic state commands and also ionic plugin/platform. Use directly cordova prepare (or cordova plugin/platform). Also save your plugin/platform only inside config.xml, not package.json to avoid confusion. See [this](https://github.com/driftyco/ionic-cli/issues/1324) for further informations. 
 
 ### <a name="webstorm"></a>Webstorm
-- Set code style for typesript:
+- Set code style for typescript:
     - {import} -> { import }
     - import * from "lodash" -> import * from 'lodash'
 - Set typescript settings to be used with the version inside node_modules instead of the bundled one
