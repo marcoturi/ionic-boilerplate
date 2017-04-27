@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Simple form</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="simpleFormForm">
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input formControlName="name" type="text"></ion-input>
+        </ion-item>
+    </form>
+    <button ion-button full color="primary" (click)="save()">Save</button>
+</ion-content>
