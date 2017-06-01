@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.25.0"></a>
+# [0.25.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.24.0...v0.25.0) (2017-06-01)
+
+
+### Features
+
+* **app:** update to ionic 3.3 ([5c36f55](https://github.com/marcoturi/ionic2-boilerplate/commit/5c36f55))
+
+
+
 <a name="0.24.0"></a>
 # [0.24.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.22.0...v0.24.0) (2017-04-20)
 
