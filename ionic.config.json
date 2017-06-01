@@ -1,7 +1,6 @@
 {
   "name": "ionic2-boilerplate",
   "app_id": "25a5ac9a",
-  "v2": true,
-  "typescript": true,
-  "defaultBrowser": "Chrome"
+  "defaultBrowser": "Chrome",
+  "type": "ionic-angular"
 }
