@@ -15,7 +15,7 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-            args: [ '--headless', '--disable-gpu','--disable-web-security', '--window-size=1024,768', 'no-sandbox']
+            args: [ '--headless', '--disable-gpu', '--window-size=414,736',]
         }
     },
     framework: 'jasmine2',
@@ -40,7 +40,7 @@ exports.config = {
         // Add screenshot reporter
         jasmine.getEnv().addReporter(screenshotReporter);
         browser.ignoreSynchronization = false;
-        browser.driver.manage().window().setSize(414, 736);
+        // browser.driver.manage().window().setSize(414, 736);
     },
     beforeLaunch: function() {
         require('ts-node').register({
