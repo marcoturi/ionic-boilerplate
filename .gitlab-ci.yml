@@ -5,15 +5,18 @@ stages:
   - deploy
 
 before_script:
-  - yarn config set cache-folder yarn-cache
+  - yarn config set cache-folder .yarn
   - yarn
   - gem install scss_lint
   - export DISPLAY=:99
   - npm run post-install
 
 cache:
+  untracked: true
+  key: "$CI_PROJECT_ID"
   paths:
-    - yarn-cache/
+    - node_modules/
+    - .yarn
 
 build_web:
   stage: test
