@@ -8,7 +8,6 @@ before_script:
   - yarn config set cache-folder .yarn
   - yarn
   - gem install scss_lint
-  - export DISPLAY=:99
   - npm run post-install
 
 cache:
@@ -25,7 +24,6 @@ build_web:
   script:
     - npm run lint
     - npm run scss-lint
-    - /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &
     - npm run test
     - npm run build
     - npm run e2e
