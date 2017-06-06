@@ -37,6 +37,7 @@ NOTE: I moved Unit tests from running through Rollup to Webpack with release 0.1
     - Screenshot reporter for Protractor.
     - Code coverage with Istanbul.
     - Gitlab badge [see here for info](#gitlab-ci)
+    - Headless Chrome support for testing
 - Linting
     - [SCSS Lint](https://github.com/HugoGiraudel/sass-boilerplate) following Sass Guidelines.
     - TSlint with [Codelyzer](https://github.com/mgechev/codelyzer).

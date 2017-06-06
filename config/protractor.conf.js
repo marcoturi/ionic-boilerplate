@@ -15,7 +15,7 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-            args: ['--disable-web-security', '--window-size=1024,768', 'no-sandbox']
+            args: [ '--headless', '--disable-gpu','--disable-web-security', '--window-size=1024,768', 'no-sandbox']
         }
     },
     framework: 'jasmine2',
