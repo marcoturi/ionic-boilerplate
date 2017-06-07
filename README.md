@@ -99,8 +99,8 @@ npm run dev
 
 | Key                            | Description                                                                                                      |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------|
-| `IONIC_LOGIN_EMAIL`            | Your ionic.io email                                                                                              |
-| `IONIC_LOGIN_PASSWORD`         | Your ionic.io password                                                                                           |
+| `IONIC_EMAIL`                  | Your ionic.io email                                                                                              |
+| `IONIC_PASSWORD`               | Your ionic.io password                                                                                           |
 | `IONIC_PACKAGE_BUILD_RELEASE`  | (Optional) Indicate whether this is a release build. Possible values are `true` or `false`. Defaults to `false`. |
 | `IONIC_PACKAGE_BUILD_PROFILE`  | Security profile to use for the build, as defined in Ionic.io console.                                           |
 

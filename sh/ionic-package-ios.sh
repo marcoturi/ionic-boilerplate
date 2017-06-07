@@ -33,8 +33,8 @@ main() {
   # echo $finalCmd;
 
   PACKAGE_ID="$($finalCmd | \
-  grep "Build ID: " | \
-  sed -E 's/Build ID: ([0-9]+)/\1/')" #on linux use sad -r on osx sad -E
+  grep "Build " | \
+  sed -E 's/Build ([0-9]+)/\1/')" #on linux use sad -r on osx sad -E
 
   # echo $grepBuildId
 
