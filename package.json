@@ -78,14 +78,14 @@
       }
     },
     "ios:dev": {
-      "command": "ionic run ios --livereload",
+      "command": "ionic cordova run ios --livereload",
       "env": {
         "NODE_ENV": "development",
         "PLATFORM": "ios"
       }
     },
     "ios:release": {
-      "command": "ionic build ios --prod",
+      "command": "ionic cordova build ios --prod --release",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "ios"
@@ -99,14 +99,14 @@
       }
     },
     "android:dev": {
-      "command": "ionic run android --livereload",
+      "command": "ionic cordova run android --livereload",
       "env": {
         "NODE_ENV": "development",
         "PLATFORM": "android"
       }
     },
     "android:release": {
-      "command": "ionic build android --prod",
+      "command": "ionic cordova build android --prod --release",
       "env": {
         "NODE_ENV": "production",
         "PLATFORM": "android"
@@ -161,7 +161,6 @@
     "karma-remap-coverage": "0.1.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "2.0.3",
-    "phantomjs-prebuilt": "^2.1.14",
     "protractor": "5.1.2",
     "protractor-jasmine2-screenshot-reporter": "^0.3.5",
     "raw-loader": "0.5.1",
