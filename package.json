@@ -36,7 +36,7 @@
     "docs": "typedoc --options typedoc.json --exclude '**/*+(e2e|spec|index).ts' ./src/",
     "release": "standard-version --no-verify",
     "push": "git push --follow-tags origin master",
-    "lint": "tslint \"src/**/*.ts\"",
+    "lint": "tslint \"src/**/*.ts\" --type-check --project ./tsconfig.json",
     "scss-lint": "scss-lint",
     "outdated": "npm outdated --depth 0",
     "post-install": "webdriver-manager update --standalone",

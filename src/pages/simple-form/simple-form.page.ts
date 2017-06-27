@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'ib-page-simple-form',
     templateUrl: './simple-form.page.html',
 })
-export class SimpleFormPage {
-    simpleFormForm: FormGroup;
+export class SimpleFormPage implements OnInit {
+    public simpleFormForm: FormGroup;
 
     constructor(public formBuilder: FormBuilder) {
     }

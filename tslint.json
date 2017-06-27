@@ -55,6 +55,9 @@
     "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
     "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
 
+    "angular-whitespace": [true, "check-interpolation", "check-pipe"],
+    "banana-in-box": true,
+    "templates-no-negated-async": true,
     "directive-selector": [true, "attribute", "ib", "camelCase"],
     "component-selector": [true, "element", "ib", "kebab-case"],
     "use-input-property-decorator": true,
@@ -64,13 +67,15 @@
     "no-input-rename": true,
     "no-output-rename": true,
     "no-forward-ref": true,
-    "use-life-cycle-interface": false,
+    "use-view-encapsulation": false,
+    "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
-    "pipe-naming": [true, "camelCase", "sg"],
+    "pipe-naming": [true, "camelCase", "ib"],
     "component-class-suffix": false,
     "directive-class-suffix": true,
-    "templates-use-public": false,
+    "templates-use-public": true,
     "no-access-missing-member": false,
-    "invoke-injectable": true
+    "invoke-injectable": true,
+    "template-to-ng-template": true
   }
 }
