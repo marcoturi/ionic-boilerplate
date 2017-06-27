@@ -156,18 +156,6 @@ module.exports = (options) => {
                 },
 
                 /**
-                 * Raw loader support for *.css files
-                 * Returns file content as string
-                 *
-                 * See: https://github.com/webpack/raw-loader
-                 */
-                {
-                    test: /\.css$/,
-                    loaders: ['to-string-loader', 'css-loader'],
-                    exclude: [helpers.root('src/index.html')]
-                },
-
-                /**
                  * Raw loader support for *.html
                  * Returns file content as string
                  *
