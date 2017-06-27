@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.26.0"></a>
+# [0.26.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.25.0...v0.26.0) (2017-06-27)
+
+
+### Bug Fixes
+
+* **deploy:** update yarn configuration for CI ([0f71474](https://github.com/marcoturi/ionic2-boilerplate/commit/0f71474))
+* **test:** trying to get rid of "unknown error: cannot ([584c896](https://github.com/marcoturi/ionic2-boilerplate/commit/584c896))
+
+
+### Features
+
+* **app:** Headless Chrome support for testing and dep. update ([28f650e](https://github.com/marcoturi/ionic2-boilerplate/commit/28f650e))
+
+
+
 <a name="0.25.0"></a>
 # [0.25.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.24.0...v0.25.0) (2017-06-01)
 
