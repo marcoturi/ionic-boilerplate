@@ -1,6 +1,6 @@
 {
   "name": "ionic2-boilerplate",
-  "version": "0.26.1",
+  "version": "0.26.2",
   "description": "An Ionic Starter kit featuring Ionic, Karma, Protractor, Jasmine, CI, and much more",
   "keywords": [
     "ionic2",
@@ -53,8 +53,8 @@
       }
     },
     "build": {
-        "command": "ionic-app-scripts build --prod --tsconfig ./tsconfig.build.json",
-        "env": {
+      "command": "ionic-app-scripts build --prod --tsconfig ./tsconfig.build.json",
+      "env": {
         "NODE_ENV": "production"
       }
     },
