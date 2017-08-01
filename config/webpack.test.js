@@ -50,7 +50,6 @@ module.exports = (options) => {
     }
 
     return {
-
         /**
          * Source map for Karma from the help of karma-sourcemap-loader &  karma-webpack
          *
@@ -58,37 +57,31 @@ module.exports = (options) => {
          * See: https://github.com/webpack/karma-webpack#source-maps
          */
         devtool: 'inline-source-map',
-
         /**
          * Options affecting the resolving of modules.
          *
          * See: http://webpack.github.io/docs/configuration.html#resolve
          */
         resolve: {
-
             /**
              * An array of extensions that should be used to resolve modules.
              *
              * See: http://webpack.github.io/docs/configuration.html#resolve-extensions
              */
             extensions: ['.ts', '.js'],
-
             /**
              * Make sure root is src
              */
             modules: [ path.resolve(__dirname, 'src'), 'node_modules' ]
 
         },
-
         /**
          * Options affecting the normal modules.
          *
          * See: http://webpack.github.io/docs/configuration.html#module
          */
         module: {
-
             rules: [
-
                 /**
                  * Source map loader support for *.js files
                  * Extracts SourceMaps for source files that as added as sourceMappingURL comment.
@@ -106,7 +99,6 @@ module.exports = (options) => {
                         helpers.root('node_modules/ionic-angular')
                     ]
                 },
-
                 /**
                  * Typescript loader support for .ts and Angular 2 async routes via .async.ts
                  *
@@ -131,18 +123,6 @@ module.exports = (options) => {
                     // },
                     exclude: [/\.e2e\.ts$/]
                 },
-
-                /**
-                 * Json loader support for *.json files.
-                 *
-                 * See: https://github.com/webpack/json-loader
-                 */
-                {
-                    test: /\.json$/,
-                    loader: 'json-loader',
-                    exclude: [helpers.root('src/index.html')]
-                },
-
                 /**
                  * Raw loader support for *.html
                  * Returns file content as string
@@ -158,14 +138,12 @@ module.exports = (options) => {
                 postLoaders
             ]
         },
-
         /**
          * Add additional plugins to the compiler.
          *
          * See: http://webpack.github.io/docs/configuration.html#plugins
          */
         plugins: [
-
             /**
              * Plugin: DefinePlugin
              * Description: Define free variables.
@@ -183,7 +161,6 @@ module.exports = (options) => {
                     'NODE_ENV': JSON.stringify(ENV)
                 }
             }),
-
             /**
              * Plugin: ContextReplacementPlugin
              * Description: Provides context to Angular's use of System.import
@@ -192,43 +169,11 @@ module.exports = (options) => {
              * See: https://github.com/angular/angular/issues/11580
              */
             new ContextReplacementPlugin(
-                /angular(\\|\/)core(\\|\/)@angular/,
+                /(ionic-angular)|(angular(\\|\/)core(\\|\/)@angular)/,
                 path.resolve('./src'),
                 {}
-            ),
-
-            new ContextReplacementPlugin(
-                /ionic-angular/,
-                path.resolve('./src'),
-                {}
-            ),
-
-            /**
-             * Plugin LoaderOptionsPlugin (experimental)
-             *
-             * See: https://gist.github.com/sokra/27b24881210b56bbaff7
-             */
-            new LoaderOptionsPlugin({
-                debug: true,
-                options: {
-
-                    /**
-                     * Static analysis linter for TypeScript advanced options configuration
-                     * Description: An extensible linter for the TypeScript language.
-                     *
-                     * See: https://github.com/wbuchwalter/tslint-loader
-                     */
-                    tslint: {
-                        emitErrors: false,
-                        failOnHint: false,
-                        resourcePath: 'src'
-                    },
-
-                }
-            }),
-
+            )
         ],
-
         /**
          * Disable performance hints
          *
@@ -237,8 +182,6 @@ module.exports = (options) => {
         performance: {
             hints: false
         },
-
-
         /**
          * Include polyfills or mocks for various node stuff
          * Description: Node configuration
@@ -253,6 +196,5 @@ module.exports = (options) => {
             clearImmediate: false,
             setImmediate: false
         }
-
     };
 };
