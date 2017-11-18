@@ -51,6 +51,8 @@ module.exports = (config) => {
                 flags: [
                     '--headless',
                     '--disable-gpu',
+                    '--disable-translate',
+                    '--disable-extensions',
                     // Without a remote debugging port, Google Chrome exits immediately.
                     '--remote-debugging-port=9222',
                 ],

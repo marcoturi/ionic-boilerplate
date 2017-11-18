@@ -5,8 +5,6 @@
 
 const helpers = require('./helpers');
 const path = require('path');
-
-const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
@@ -68,7 +66,7 @@ module.exports = (options) => {
              *
              * See: http://webpack.github.io/docs/configuration.html#resolve-extensions
              */
-            extensions: ['.ts', '.js'],
+            extensions: ['.ts', '.js', '.json'],
             /**
              * Make sure root is src
              */
@@ -107,20 +105,42 @@ module.exports = (options) => {
                 {
                     test: /\.ts$/,
 
-                    loaders: [
-                        `awesome-typescript-loader?sourceMap=${!coverageEnabled},inlineSourceMap=${coverageEnabled},module=commonjs,noEmitHelpers=true,compilerOptions{}=removeComments:true`,
-                        'angular2-template-loader'
+                    use: [
+                        {
+                            loader: 'awesome-typescript-loader',
+                            // options: {
+                            //     configFileName: 'tsconfig.test.json'
+                            // },
+                            query: {
+                                /**
+                                 * Use inline sourcemaps for "karma-remap-coverage" reporter
+                                 */
+                                sourceMap: !coverageEnabled,
+                                inlineSourceMap: coverageEnabled,
+                                module: 'commonjs',
+                                noEmitHelpers: true,
+                                compilerOptions: {
+
+                                    /**
+                                     * Remove TypeScript helpers to be injected
+                                     * below by DefinePlugin
+                                     */
+                                    removeComments: true
+
+                                }
+                            },
+                        },
+                        // {
+                        //     loader: 'ngc-webpack',
+                        //     options: {
+                        //         tsConfigPath: "tsconfig.test.json",
+                        //     }
+                        // },
+                        {
+                            loader: 'angular2-template-loader'
+                        }
                     ],
-                    // query: {
-                    //     // use inline sourcemaps for "karma-remap-coverage" reporter
-                    //     sourceMap: !coverageEnabled,
-                    //     inlineSourceMap: coverageEnabled,
-                    //     module: 'commonjs',
-                    //     noEmitHelpers: true,
-                    //     compilerOptions: {
-                    //         removeComments: true
-                    //     }
-                    // },
+
                     exclude: [/\.e2e\.ts$/]
                 },
                 /**
@@ -169,10 +189,23 @@ module.exports = (options) => {
              * See: https://github.com/angular/angular/issues/11580
              */
             new ContextReplacementPlugin(
-                /(ionic-angular)|(angular(\\|\/)core(\\|\/)@angular)/,
+                /(ionic-angular)|(@angular(\\|\/)core(\\|\/)esm5)/,
                 path.resolve('./src'),
                 {}
-            )
+            ),
+            /**
+             * Plugin LoaderOptionsPlugin (experimental)
+             *
+             * See: https://gist.github.com/sokra/27b24881210b56bbaff7
+             */
+            new LoaderOptionsPlugin({
+                debug: false,
+                options: {
+                    /**
+                     * legacy options go here
+                     */
+                }
+            }),
         ],
         /**
          * Disable performance hints

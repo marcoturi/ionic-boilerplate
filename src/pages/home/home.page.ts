@@ -21,7 +21,7 @@ export class HomePage {
                 active: false,
             }];
 
-        this.user = (filter(myArr, o => o.active))[0];
+        this.user = (filter(myArr, (o) => o.active))[0];
     }
 
 }

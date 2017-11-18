@@ -1,21 +1,21 @@
 export class NavMock {
 
     public pop(): any {
-        return new Promise(function(resolve: Function): void {
+        return new Promise((resolve) => {
             resolve();
         });
     }
 
     public push(): any {
-        return new Promise(function(resolve: Function): void {
+        return new Promise((resolve) => {
             resolve();
         });
     }
 
     public getActive(): any {
         return {
-            'instance': {
-                'model': 'something',
+            instance: {
+                model: 'something',
             },
         };
     }

@@ -5,16 +5,15 @@ import { AboutPage } from '../about/about.page';
 import { ContactPage } from '../contact/contact.page';
 
 @Component({
-  templateUrl: 'tabs.page.html',
+    templateUrl: 'tabs.page.html',
 })
 export class TabsPage {
-  // this tells the tabs component which Pages
-  // should be each tab's root Page
-  tab1Root: any = HomePage;
-  tab2Root: any = AboutPage;
-  tab3Root: any = ContactPage;
+    // this tells the tabs component which Pages
+    // should be each tab's root Page
+    public tab1Root: any = HomePage;
+    public tab2Root: any = AboutPage;
+    public tab3Root: any = ContactPage;
 
-  constructor() {
-
-  }
+    constructor() { //
+    }
 }

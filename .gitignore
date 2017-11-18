@@ -39,3 +39,5 @@ doc/
 node_modules/
 platforms/
 plugins/
+
+.sourcemaps

@@ -11,7 +11,7 @@ export class SimpleFormPage implements OnInit {
     constructor(public formBuilder: FormBuilder) {
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         this.simpleFormForm = this.formBuilder.group({
             name: new FormControl( '' ),
         });
