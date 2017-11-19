@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.27.0"></a>
+# [0.27.0](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.26.2...v0.27.0) (2017-11-19)
+
+
+### Features
+
+* **app:** update to ionic 3.9.2/Angular 5 ([cb53fc0](https://github.com/marcoturi/ionic2-boilerplate/commit/cb53fc0))
+
+
+### Reverts
+
+* **npm:** remove unused dev-deps ([be93828](https://github.com/marcoturi/ionic2-boilerplate/commit/be93828))
+
+
+
 <a name="0.26.2"></a>
 ## [0.26.2](https://github.com/marcoturi/ionic2-boilerplate/compare/v0.26.1...v0.26.2) (2017-07-14)
 
