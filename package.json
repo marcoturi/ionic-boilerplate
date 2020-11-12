@@ -166,7 +166,7 @@
     "karma-coverage": "1.1.1",
     "karma-jasmine": "1.1.0",
     "karma-mocha-reporter": "2.2.5",
-    "karma-remap-coverage": "0.1.4",
+    "karma-remap-coverage": "0.1.5",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "2.0.6",
     "protractor": "5.2.0",

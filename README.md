@@ -63,7 +63,7 @@ git clone --depth 1 https://github.com/marcoturi/ionic2-boilerplate.git
 cd ionic2-boilerplate
 
 # Install project dependencies
-yarn
+yarn --ignore-engines
 npm run post-install
 
 # Launch ionic serve
